@@ -1,0 +1,92 @@
+# Data
+data/
+D:/flood_research/data/
+**/data/raw/
+**/data/processed/
+**/data/interim/
+**/data/external/
+**/data/dem/
+**/data/**/*.tif
+**/data/**/*.tiff
+**/data/**/*.png
+**/data/**/*.jpg
+**/data/**/*.jpeg
+
+# External research storage
+D:/flood_research/venvs/
+D:/flood_research/data/
+D:/flood_research/experiments/**/checkpoints/
+D:/flood_research/experiments/**/predictions/
+D:/flood_research/experiments/**/logs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+venvs/
+*/venv/
+*/.venv/
+
+# Model weights and checkpoints
+checkpoints/
+**/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.hdf5
+
+# Predictions and heavy experiment outputs
+predictions/
+**/predictions/
+experiments/results/
+experiments/building_masks/outputs/
+experiments/smoke_tests/data/
+experiments/smoke_tests/data_baseline/
+experiments/smoke_tests/data_topographic/
+*.npy
+*.npz
+reports/figures/panel_*.png
+
+# Logs and cache
+logs/
+**/logs/
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+cache/
+
+# Archives and generated bulky files
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Geospatial artifacts that should be regenerated or downloaded separately
+*.gpkg
+*.html
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets
+.env
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.token
+secrets.*

@@ -1,0 +1,15 @@
+loss:
+  type: segmentation_with_topographic
+  segmentation_loss: cross_entropy
+  class_weights: [1.0, 8.0]
+  ignore_index: 255
+  lambda_topo: 0.1
+  use_eight_neighbors: true
+  height_scale: 1.0
+  max_weight: 10.0
+  use_pixel_reliability: false
+
+topographic_metric:
+  threshold: 0.5
+  use_eight_neighbors: true
+

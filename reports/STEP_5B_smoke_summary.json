@@ -1,0 +1,54 @@
+{
+  "config_load_ok": true,
+  "config_path": "D:/flood_research/experiments/terramind_baseline/configs/terramind_v1_tiny_sen1floods11_smoke.yaml",
+  "datamodule_import_ok": true,
+  "datamodule_init_ok": true,
+  "datamodule_setup_fit_ok": true,
+  "elapsed_seconds": 211.813,
+  "errors": [],
+  "first_train_sample_paths": {
+    "S1GRD": "D:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_103272_S1Hand.tif",
+    "S2L1C": "D:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/S2Hand/Ghana_103272_S2Hand.tif",
+    "mask": "D:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_103272_LabelHand.tif"
+  },
+  "model_forward_attempted": false,
+  "model_forward_ok": false,
+  "model_init_attempted": false,
+  "model_init_ok": false,
+  "sample_image_modalities": {
+    "S1GRD": {
+      "dtype": "torch.float32",
+      "finite": true,
+      "shape": [
+        2,
+        512,
+        512
+      ]
+    },
+    "S2L1C": {
+      "dtype": "torch.float32",
+      "finite": true,
+      "shape": [
+        13,
+        512,
+        512
+      ]
+    }
+  },
+  "sample_load_ok": true,
+  "sample_mask": {
+    "dtype": "torch.int64",
+    "shape": [
+      512,
+      512
+    ],
+    "unique_values": [
+      -1,
+      0,
+      1
+    ],
+    "valid_label_values_only": true
+  },
+  "train_dataset_len": 251,
+  "val_dataset_len": 86
+}

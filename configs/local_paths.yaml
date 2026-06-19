@@ -1,0 +1,15 @@
+data_root: "D:/urban_runoff_data"
+
+raw:
+  sen1floods11: "D:/urban_runoff_data/raw/Sen1Floods11"
+  sturm_flood: "D:/urban_runoff_data/raw/STURM-Flood"
+  dem: "D:/urban_runoff_data/raw/DEM"
+
+processed:
+  sen1floods11: "D:/urban_runoff_data/processed/Sen1Floods11"
+  sturm_flood: "D:/urban_runoff_data/processed/STURM-Flood"
+  aligned_dem: "D:/urban_runoff_data/processed/aligned_dem"
+
+manifests: "D:/urban_runoff_data/manifests"
+logs: "D:/urban_runoff_data/logs"
+tmp: "D:/urban_runoff_data/tmp"

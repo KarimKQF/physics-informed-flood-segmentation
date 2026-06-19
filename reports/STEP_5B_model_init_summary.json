@@ -1,0 +1,12 @@
+{
+  "config_path": "D:/flood_research/experiments/terramind_baseline/configs/terramind_v1_tiny_sen1floods11_smoke.yaml",
+  "elapsed_seconds": 185.024,
+  "errors": [],
+  "model_forward_attempted": false,
+  "model_forward_ok": false,
+  "model_init_attempted": true,
+  "model_init_ok": true,
+  "pretrained_weights_enabled": false,
+  "task_class": "SemanticSegmentationTask",
+  "training_started": false
+}

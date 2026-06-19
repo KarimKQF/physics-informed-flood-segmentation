@@ -1,0 +1,4237 @@
+{
+  "generated_at": "2026-06-19T16:03:00",
+  "status": "done",
+  "raw_data_modified": false,
+  "input_files": {
+    "inventory": "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/sen1floods11_file_inventory.csv",
+    "index": "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/sen1floods11_handlabeled_index.csv",
+    "audit": "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/sen1floods11_handlabeled_audit.csv"
+  },
+  "global_statistics": {
+    "total_hand_labeled_samples": 446,
+    "analysis_training_candidate_samples": 441,
+    "exclude_candidate_samples": [
+      "Ghana_234935",
+      "Ghana_26376",
+      "Ghana_277",
+      "Ghana_5079",
+      "Ghana_83483"
+    ],
+    "samples_by_split": {
+      "bolivia": 15,
+      "train": 252,
+      "valid": 89,
+      "test": 90
+    },
+    "samples_by_status": {
+      "warning": 69,
+      "ok": 372,
+      "error": 5
+    },
+    "samples_by_cleaning_recommendation": {
+      "warning_review": 69,
+      "keep": 372,
+      "exclude_candidate": 5
+    },
+    "samples_by_event_location": {
+      "Bolivia": 15,
+      "Ghana": 53,
+      "India": 68,
+      "Mekong": 30,
+      "Nigeria": 18,
+      "Pakistan": 28,
+      "Paraguay": 67,
+      "Somalia": 26,
+      "Spain": 30,
+      "Sri-Lanka": 42,
+      "USA": 69
+    },
+    "no_water_samples": 52,
+    "high_invalid_ratio_samples": 38,
+    "only_invalid_labelhand_samples": 5,
+    "labelhand_rows_available": 446
+  },
+  "label_statistics": {
+    "total_label_counts": {
+      "-1": 15932910,
+      "0": 90277709,
+      "1": 10705605
+    },
+    "total_label_distribution": {
+      "-1": {
+        "count": 15932910,
+        "percent": 13.62763
+      },
+      "0": {
+        "count": 90277709,
+        "percent": 77.215724
+      },
+      "1": {
+        "count": 10705605,
+        "percent": 9.156646
+      }
+    },
+    "total_pixels": 116916224,
+    "water_pct_by_tile_summary": {
+      "min": 0.0,
+      "p25": 0.461292,
+      "median": 2.187729,
+      "mean": 9.156646,
+      "p75": 9.843922,
+      "max": 98.139954
+    },
+    "invalid_pct_by_tile_summary": {
+      "min": 0.0,
+      "p25": 0.002384,
+      "median": 0.948524,
+      "mean": 13.62763,
+      "p75": 19.217682,
+      "max": 100.0
+    },
+    "distribution_by_split": {
+      "bolivia": {
+        "-1": {
+          "count": 1064345,
+          "percent": 27.067693
+        },
+        "0": {
+          "count": 2412951,
+          "percent": 61.364517
+        },
+        "1": {
+          "count": 454864,
+          "percent": 11.56779
+        }
+      },
+      "test": {
+        "-1": {
+          "count": 3075593,
+          "percent": 13.036062
+        },
+        "0": {
+          "count": 17951266,
+          "percent": 76.087384
+        },
+        "1": {
+          "count": 2566101,
+          "percent": 10.876554
+        }
+      },
+      "train": {
+        "-1": {
+          "count": 8756881,
+          "percent": 13.255893
+        },
+        "0": {
+          "count": 51856372,
+          "percent": 78.498556
+        },
+        "1": {
+          "count": 5447035,
+          "percent": 8.245551
+        }
+      },
+      "valid": {
+        "-1": {
+          "count": 3036091,
+          "percent": 13.013223
+        },
+        "0": {
+          "count": 18057120,
+          "percent": 77.396007
+        },
+        "1": {
+          "count": 2237605,
+          "percent": 9.59077
+        }
+      }
+    },
+    "distribution_by_event_location": {
+      "Bolivia": {
+        "-1": {
+          "count": 1064345,
+          "percent": 27.067693
+        },
+        "0": {
+          "count": 2412951,
+          "percent": 61.364517
+        },
+        "1": {
+          "count": 454864,
+          "percent": 11.56779
+        }
+      },
+      "Ghana": {
+        "-1": {
+          "count": 4699558,
+          "percent": 33.825266
+        },
+        "0": {
+          "count": 8616366,
+          "percent": 62.016656
+        },
+        "1": {
+          "count": 577708,
+          "percent": 4.158078
+        }
+      },
+      "India": {
+        "-1": {
+          "count": 2847199,
+          "percent": 15.972356
+        },
+        "0": {
+          "count": 13122901,
+          "percent": 73.617492
+        },
+        "1": {
+          "count": 1855692,
+          "percent": 10.410152
+        }
+      },
+      "Mekong": {
+        "-1": {
+          "count": 733138,
+          "percent": 9.322332
+        },
+        "0": {
+          "count": 5410998,
+          "percent": 68.804398
+        },
+        "1": {
+          "count": 1720184,
+          "percent": 21.873271
+        }
+      },
+      "Nigeria": {
+        "-1": {
+          "count": 675445,
+          "percent": 14.314546
+        },
+        "0": {
+          "count": 3094816,
+          "percent": 65.587701
+        },
+        "1": {
+          "count": 948331,
+          "percent": 20.097754
+        }
+      },
+      "Pakistan": {
+        "-1": {
+          "count": 1963437,
+          "percent": 26.749706
+        },
+        "0": {
+          "count": 4973488,
+          "percent": 67.758397
+        },
+        "1": {
+          "count": 403107,
+          "percent": 5.491897
+        }
+      },
+      "Paraguay": {
+        "-1": {
+          "count": 884548,
+          "percent": 5.036243
+        },
+        "0": {
+          "count": 15279961,
+          "percent": 86.99765
+        },
+        "1": {
+          "count": 1399139,
+          "percent": 7.966107
+        }
+      },
+      "Somalia": {
+        "-1": {
+          "count": 1440345,
+          "percent": 21.132616
+        },
+        "0": {
+          "count": 5025530,
+          "percent": 73.734137
+        },
+        "1": {
+          "count": 349869,
+          "percent": 5.133247
+        }
+      },
+      "Spain": {
+        "-1": {
+          "count": 136518,
+          "percent": 1.735916
+        },
+        "0": {
+          "count": 6711302,
+          "percent": 85.338618
+        },
+        "1": {
+          "count": 1016500,
+          "percent": 12.925466
+        }
+      },
+      "Sri-Lanka": {
+        "-1": {
+          "count": 1046787,
+          "percent": 9.507561
+        },
+        "0": {
+          "count": 8787850,
+          "percent": 79.816637
+        },
+        "1": {
+          "count": 1175411,
+          "percent": 10.675803
+        }
+      },
+      "USA": {
+        "-1": {
+          "count": 441590,
+          "percent": 2.441351
+        },
+        "0": {
+          "count": 16841546,
+          "percent": 93.109275
+        },
+        "1": {
+          "count": 804800,
+          "percent": 4.449374
+        }
+      }
+    },
+    "per_tile": {
+      "Bolivia_103757": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 13.489532,
+        "invalid_pct": 66.401291,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Bolivia_129334": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 59.754562,
+        "invalid_pct": 9.281158,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_195474": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 0.59166,
+        "invalid_pct": 0.308609,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_23014": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 2.967834,
+        "invalid_pct": 20.090103,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_233925": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 0.000381,
+        "invalid_pct": 42.574692,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_242570": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 10.431671,
+        "invalid_pct": 33.049393,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_290290": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 7.514572,
+        "invalid_pct": 21.938705,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_294583": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 5.725098,
+        "invalid_pct": 50.228882,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Bolivia_312675": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 3.652573,
+        "invalid_pct": 39.724731,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_314919": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 31.920624,
+        "invalid_pct": 27.961349,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_360519": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 1.068497,
+        "invalid_pct": 3.071976,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_379434": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 4.116058,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_432776": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 27.521133,
+        "invalid_pct": 40.151596,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_60373": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 4.760742,
+        "invalid_pct": 24.080276,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Bolivia_76104": {
+        "split": "bolivia",
+        "event_location": "Bolivia",
+        "water_pct": 0.001907,
+        "invalid_pct": 27.152634,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_103272": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.59433,
+        "invalid_pct": 1.096725,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_1033830": {
+        "split": "valid",
+        "event_location": "Ghana",
+        "water_pct": 36.930466,
+        "invalid_pct": 11.030197,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_1078550": {
+        "split": "test",
+        "event_location": "Ghana",
+        "water_pct": 0.536728,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_1089161": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 1.108932,
+        "invalid_pct": 9.910583,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_11745": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_124834": {
+        "split": "valid",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_128663": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 35.406113,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_132163": {
+        "split": "valid",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 78.728867,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_134751": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 83.590698,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_135389": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.09613,
+        "invalid_pct": 90.606689,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_141271": {
+        "split": "test",
+        "event_location": "Ghana",
+        "water_pct": 0.624084,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_141910": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 26.950836,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_142312": {
+        "split": "valid",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_144050": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 91.016006,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_146222": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 30.703735,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_147015": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 1.346588,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_154838": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 83.937454,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_156478": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_161233": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 99.278259,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_167233": {
+        "split": "test",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_168875": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 84.056091,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_187318": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_194723": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 81.915283,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_234935": {
+        "split": "valid",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 100.0,
+        "recommendation": "exclude_candidate",
+        "status": "error"
+      },
+      "Ghana_247288": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 10.166168,
+        "invalid_pct": 84.674835,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_24858": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.184631,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_26376": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 100.0,
+        "recommendation": "exclude_candidate",
+        "status": "error"
+      },
+      "Ghana_264787": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 30.582047,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_277": {
+        "split": "valid",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 100.0,
+        "recommendation": "exclude_candidate",
+        "status": "error"
+      },
+      "Ghana_308249": {
+        "split": "valid",
+        "event_location": "Ghana",
+        "water_pct": 3.063202,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_313799": {
+        "split": "test",
+        "event_location": "Ghana",
+        "water_pct": 5.696487,
+        "invalid_pct": 6.744385,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_319168": {
+        "split": "test",
+        "event_location": "Ghana",
+        "water_pct": 15.076065,
+        "invalid_pct": 34.53064,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_359826": {
+        "split": "test",
+        "event_location": "Ghana",
+        "water_pct": 1.333618,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_362274": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 7.00531,
+        "invalid_pct": 1.044083,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_406026": {
+        "split": "test",
+        "event_location": "Ghana",
+        "water_pct": 1.642227,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_45911": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 88.834763,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_495107": {
+        "split": "valid",
+        "event_location": "Ghana",
+        "water_pct": 1.510239,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_49890": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_5079": {
+        "split": "valid",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 100.0,
+        "recommendation": "exclude_candidate",
+        "status": "error"
+      },
+      "Ghana_53713": {
+        "split": "test",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_597288": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 2.170563,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_61925": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.248337,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_7496": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_8090": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.001526,
+        "invalid_pct": 25.740814,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_83200": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.203323,
+        "invalid_pct": 62.533951,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_83483": {
+        "split": "test",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 100.0,
+        "recommendation": "exclude_candidate",
+        "status": "error"
+      },
+      "Ghana_866994": {
+        "split": "test",
+        "event_location": "Ghana",
+        "water_pct": 40.424728,
+        "invalid_pct": 55.173111,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_868803": {
+        "split": "valid",
+        "event_location": "Ghana",
+        "water_pct": 54.951096,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_887131": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 3.843307,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_895194": {
+        "split": "valid",
+        "event_location": "Ghana",
+        "water_pct": 3.317642,
+        "invalid_pct": 3.600311,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_953791": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 1.057434,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Ghana_97059": {
+        "split": "test",
+        "event_location": "Ghana",
+        "water_pct": 0.0,
+        "invalid_pct": 89.550018,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Ghana_97516": {
+        "split": "train",
+        "event_location": "Ghana",
+        "water_pct": 0.294113,
+        "invalid_pct": 28.453445,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_1017769": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 37.438583,
+        "invalid_pct": 34.0168,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_1018317": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 57.491302,
+        "invalid_pct": 24.859238,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_1018327": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 13.980484,
+        "invalid_pct": 0.000763,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_103447": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 10.290909,
+        "invalid_pct": 37.604141,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_1050276": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 18.693924,
+        "invalid_pct": 2.654648,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_1068117": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 18.295288,
+        "invalid_pct": 12.371826,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_1072277": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 8.600616,
+        "invalid_pct": 0.000763,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_118868": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 4.113007,
+        "invalid_pct": 38.145447,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_135434": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 3.933716,
+        "invalid_pct": 55.310822,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "India_136196": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 0.0,
+        "invalid_pct": 19.226074,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "India_164336": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 0.717545,
+        "invalid_pct": 1.160812,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_166709": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 3.371811,
+        "invalid_pct": 2.002716,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_177319": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 0.608444,
+        "invalid_pct": 1.87645,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_179238": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 4.421997,
+        "invalid_pct": 26.573944,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_180633": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 28.901291,
+        "invalid_pct": 37.227249,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_207862": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 8.021545,
+        "invalid_pct": 23.662186,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_244057": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 0.001907,
+        "invalid_pct": 38.759995,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_25540": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 4.409409,
+        "invalid_pct": 28.045273,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_265762": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 3.255081,
+        "invalid_pct": 43.811035,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_273873": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 2.077484,
+        "invalid_pct": 40.640259,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_285297": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 13.735199,
+        "invalid_pct": 6.523895,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_287642": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 6.833649,
+        "invalid_pct": 55.987167,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "India_324254": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 1.481247,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_373039": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 0.575638,
+        "invalid_pct": 7.385635,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_383430": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 14.964294,
+        "invalid_pct": 4.14772,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_391908": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 9.914017,
+        "invalid_pct": 19.192505,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_399883": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 51.991272,
+        "invalid_pct": 0.009537,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_44475": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 0.0,
+        "invalid_pct": 0.751114,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "India_500266": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 14.564896,
+        "invalid_pct": 0.001144,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_533192": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 18.718719,
+        "invalid_pct": 48.403549,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_534470": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 2.835846,
+        "invalid_pct": 4.415131,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_56450": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 0.031281,
+        "invalid_pct": 30.859375,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_566697": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 5.614853,
+        "invalid_pct": 17.715836,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_570384": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 5.549622,
+        "invalid_pct": 7.684326,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_591317": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 43.502426,
+        "invalid_pct": 6.139755,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_591549": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 4.216766,
+        "invalid_pct": 6.269455,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_592446": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 3.450012,
+        "invalid_pct": 14.415359,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_59460": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 0.120163,
+        "invalid_pct": 20.138168,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_624341": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 1.229858,
+        "invalid_pct": 0.000763,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_631692": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 0.305939,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_652725": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 8.314133,
+        "invalid_pct": 0.019073,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_664410": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 5.15976,
+        "invalid_pct": 0.000763,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_691027": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 3.202057,
+        "invalid_pct": 3.093719,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_698338": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 3.790283,
+        "invalid_pct": 13.031006,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_70352": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 5.030823,
+        "invalid_pct": 8.741379,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_707886": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 2.16217,
+        "invalid_pct": 2.007675,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_73419": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 2.384949,
+        "invalid_pct": 31.742096,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_747970": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 1.910019,
+        "invalid_pct": 5.961227,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_747992": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 44.754791,
+        "invalid_pct": 0.021744,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_764946": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 1.200104,
+        "invalid_pct": 7.492828,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_769408": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 3.273773,
+        "invalid_pct": 32.896805,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_772630": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 0.513077,
+        "invalid_pct": 40.745544,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_773682": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 11.809921,
+        "invalid_pct": 3.567123,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_774689": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 7.192612,
+        "invalid_pct": 9.217834,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_79637": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 1.970291,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_80221": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 43.680573,
+        "invalid_pct": 42.095566,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_804466": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 19.160461,
+        "invalid_pct": 0.003815,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_828067": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 2.667999,
+        "invalid_pct": 30.145264,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_833266": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 6.9664,
+        "invalid_pct": 16.201019,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_842775": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 2.261734,
+        "invalid_pct": 5.998993,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_869358": {
+        "split": "valid",
+        "event_location": "India",
+        "water_pct": 1.926422,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_900498": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 47.284317,
+        "invalid_pct": 0.057983,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_91379": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 11.289215,
+        "invalid_pct": 0.004196,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_943439": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 18.161392,
+        "invalid_pct": 4.595947,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_952728": {
+        "split": "test",
+        "event_location": "India",
+        "water_pct": 2.230835,
+        "invalid_pct": 28.010559,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_956930": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 15.29541,
+        "invalid_pct": 9.542084,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "India_979278": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 2.074051,
+        "invalid_pct": 58.393478,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "India_981708": {
+        "split": "train",
+        "event_location": "India",
+        "water_pct": 3.962708,
+        "invalid_pct": 14.541626,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_1111068": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 2.841568,
+        "invalid_pct": 0.017548,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_1149855": {
+        "split": "valid",
+        "event_location": "Mekong",
+        "water_pct": 6.584167,
+        "invalid_pct": 14.255142,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_1191208": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 5.823135,
+        "invalid_pct": 22.824097,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_119477": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 1.142883,
+        "invalid_pct": 0.454712,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_1248200": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 78.044128,
+        "invalid_pct": 0.440979,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_1282475": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 10.128403,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_1395593": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 7.200241,
+        "invalid_pct": 0.158691,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_1396181": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 55.315781,
+        "invalid_pct": 7.279205,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_1413877": {
+        "split": "valid",
+        "event_location": "Mekong",
+        "water_pct": 0.958252,
+        "invalid_pct": 1.974487,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_1439641": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 75.455475,
+        "invalid_pct": 0.02327,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_1443339": {
+        "split": "test",
+        "event_location": "Mekong",
+        "water_pct": 73.540878,
+        "invalid_pct": 0.003433,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_16233": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 23.731613,
+        "invalid_pct": 0.004578,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_213094": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 0.042343,
+        "invalid_pct": 12.039185,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_221789": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 0.0,
+        "invalid_pct": 17.859268,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Mekong_254910": {
+        "split": "test",
+        "event_location": "Mekong",
+        "water_pct": 0.051498,
+        "invalid_pct": 21.609879,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_269835": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 0.18425,
+        "invalid_pct": 19.038391,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_293769": {
+        "split": "valid",
+        "event_location": "Mekong",
+        "water_pct": 11.702347,
+        "invalid_pct": 11.857605,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_333434": {
+        "split": "test",
+        "event_location": "Mekong",
+        "water_pct": 1.252747,
+        "invalid_pct": 22.51091,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_342411": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 11.029816,
+        "invalid_pct": 0.001144,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_382276": {
+        "split": "test",
+        "event_location": "Mekong",
+        "water_pct": 3.741455,
+        "invalid_pct": 0.012589,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_424793": {
+        "split": "test",
+        "event_location": "Mekong",
+        "water_pct": 1.527023,
+        "invalid_pct": 1.395035,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_45934": {
+        "split": "test",
+        "event_location": "Mekong",
+        "water_pct": 0.112915,
+        "invalid_pct": 0.108719,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_474783": {
+        "split": "valid",
+        "event_location": "Mekong",
+        "water_pct": 2.204895,
+        "invalid_pct": 0.009537,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_52610": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 80.365372,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_596495": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 67.575073,
+        "invalid_pct": 12.458801,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_774566": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 29.389572,
+        "invalid_pct": 13.128662,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_846007": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 2.874374,
+        "invalid_pct": 37.427521,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_922373": {
+        "split": "train",
+        "event_location": "Mekong",
+        "water_pct": 45.686722,
+        "invalid_pct": 0.002289,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_977338": {
+        "split": "valid",
+        "event_location": "Mekong",
+        "water_pct": 25.011826,
+        "invalid_pct": 32.49588,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Mekong_98310": {
+        "split": "valid",
+        "event_location": "Mekong",
+        "water_pct": 32.679367,
+        "invalid_pct": 30.278397,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_1095404": {
+        "split": "valid",
+        "event_location": "Nigeria",
+        "water_pct": 17.582321,
+        "invalid_pct": 3.761673,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_143329": {
+        "split": "train",
+        "event_location": "Nigeria",
+        "water_pct": 1.059341,
+        "invalid_pct": 4.823303,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_22088": {
+        "split": "test",
+        "event_location": "Nigeria",
+        "water_pct": 0.239944,
+        "invalid_pct": 15.067291,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_225131": {
+        "split": "test",
+        "event_location": "Nigeria",
+        "water_pct": 0.431442,
+        "invalid_pct": 7.968521,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_31096": {
+        "split": "valid",
+        "event_location": "Nigeria",
+        "water_pct": 0.311279,
+        "invalid_pct": 17.035294,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_35845": {
+        "split": "train",
+        "event_location": "Nigeria",
+        "water_pct": 0.1091,
+        "invalid_pct": 18.730927,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_417184": {
+        "split": "test",
+        "event_location": "Nigeria",
+        "water_pct": 0.527954,
+        "invalid_pct": 77.466965,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Nigeria_439488": {
+        "split": "train",
+        "event_location": "Nigeria",
+        "water_pct": 0.559998,
+        "invalid_pct": 12.567139,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_529525": {
+        "split": "train",
+        "event_location": "Nigeria",
+        "water_pct": 85.316086,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_598959": {
+        "split": "train",
+        "event_location": "Nigeria",
+        "water_pct": 17.749023,
+        "invalid_pct": 19.430542,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_600295": {
+        "split": "train",
+        "event_location": "Nigeria",
+        "water_pct": 31.914139,
+        "invalid_pct": 30.690384,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_707067": {
+        "split": "train",
+        "event_location": "Nigeria",
+        "water_pct": 1.4328,
+        "invalid_pct": 0.299454,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_78061": {
+        "split": "train",
+        "event_location": "Nigeria",
+        "water_pct": 2.095795,
+        "invalid_pct": 12.68692,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_812045": {
+        "split": "test",
+        "event_location": "Nigeria",
+        "water_pct": 45.821381,
+        "invalid_pct": 9.540558,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_81933": {
+        "split": "train",
+        "event_location": "Nigeria",
+        "water_pct": 67.882538,
+        "invalid_pct": 6.056213,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_820924": {
+        "split": "valid",
+        "event_location": "Nigeria",
+        "water_pct": 0.448608,
+        "invalid_pct": 0.000381,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_952958": {
+        "split": "train",
+        "event_location": "Nigeria",
+        "water_pct": 3.713608,
+        "invalid_pct": 13.149261,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Nigeria_984831": {
+        "split": "valid",
+        "event_location": "Nigeria",
+        "water_pct": 84.564209,
+        "invalid_pct": 8.386993,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_1027214": {
+        "split": "valid",
+        "event_location": "Pakistan",
+        "water_pct": 9.105682,
+        "invalid_pct": 39.362335,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_1036366": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 8.649063,
+        "invalid_pct": 57.893372,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_132143": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_167553": {
+        "split": "test",
+        "event_location": "Pakistan",
+        "water_pct": 0.556183,
+        "invalid_pct": 5.736923,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_210595": {
+        "split": "valid",
+        "event_location": "Pakistan",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_211386": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 2.616501,
+        "invalid_pct": 2.570724,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_246510": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 4.097366,
+        "invalid_pct": 1.26915,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_246718": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 5.007172,
+        "invalid_pct": 10.248566,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_336228": {
+        "split": "valid",
+        "event_location": "Pakistan",
+        "water_pct": 0.0,
+        "invalid_pct": 49.466324,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_35915": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 19.951248,
+        "invalid_pct": 50.701523,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_366265": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 0.000763,
+        "invalid_pct": 51.442337,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_401863": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 1.268005,
+        "invalid_pct": 1.258469,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_43105": {
+        "split": "valid",
+        "event_location": "Pakistan",
+        "water_pct": 0.103378,
+        "invalid_pct": 0.178909,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_474121": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 3.39241,
+        "invalid_pct": 31.03447,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_528249": {
+        "split": "test",
+        "event_location": "Pakistan",
+        "water_pct": 0.0,
+        "invalid_pct": 70.633698,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_548910": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 1.311874,
+        "invalid_pct": 10.089111,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_65724": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 0.0,
+        "invalid_pct": 0.000381,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_664885": {
+        "split": "test",
+        "event_location": "Pakistan",
+        "water_pct": 0.909042,
+        "invalid_pct": 72.148895,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_667363": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 0.465012,
+        "invalid_pct": 38.017273,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_694942": {
+        "split": "test",
+        "event_location": "Pakistan",
+        "water_pct": 7.049942,
+        "invalid_pct": 26.96991,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_70625": {
+        "split": "test",
+        "event_location": "Pakistan",
+        "water_pct": 1.780319,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_712873": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 0.502014,
+        "invalid_pct": 54.392624,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_740461": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 0.0,
+        "invalid_pct": 19.335938,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_760290": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 0.0,
+        "invalid_pct": 10.927582,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_849790": {
+        "split": "test",
+        "event_location": "Pakistan",
+        "water_pct": 65.577698,
+        "invalid_pct": 1.871109,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_909806": {
+        "split": "train",
+        "event_location": "Pakistan",
+        "water_pct": 0.539398,
+        "invalid_pct": 55.64003,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Pakistan_94095": {
+        "split": "valid",
+        "event_location": "Pakistan",
+        "water_pct": 20.433807,
+        "invalid_pct": 31.118011,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Pakistan_9684": {
+        "split": "valid",
+        "event_location": "Pakistan",
+        "water_pct": 0.456238,
+        "invalid_pct": 56.684113,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_1019808": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 1.972198,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_1029042": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 23.344803,
+        "invalid_pct": 14.930725,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_1029191": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 19.20166,
+        "invalid_pct": 3.130722,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_1056717": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 1.924896,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_1076204": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 1.155472,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_11869": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.084686,
+        "invalid_pct": 1.606369,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_126224": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 55.077362,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_12870": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_148318": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.850296,
+        "invalid_pct": 8.418274,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_149787": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 15.293503,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_149830": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.727463,
+        "invalid_pct": 0.650024,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_153941": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 0.244522,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_172476": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 1.073837,
+        "invalid_pct": 0.000381,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_179624": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.016022,
+        "invalid_pct": 0.013351,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_191503": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.034332,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_198534": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.0,
+        "invalid_pct": 25.427628,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_205585": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_212687": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 5.839539,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_215904": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.0,
+        "invalid_pct": 13.670349,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_224845": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.0,
+        "invalid_pct": 60.357666,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_225187": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.017929,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_232281": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 11.244583,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_24341": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 26.0746,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_246154": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.013733,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_247656": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 8.001709,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_252217": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 0.114441,
+        "invalid_pct": 2.428436,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_271769": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 0.99678,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_280900": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 2.511978,
+        "invalid_pct": 0.000763,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_284928": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_305760": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 16.704941,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_339807": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 22.141647,
+        "invalid_pct": 18.129349,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_34417": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 19.083405,
+        "invalid_pct": 80.916595,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_36015": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.0,
+        "invalid_pct": 0.001907,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_36146": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_403081": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.458527,
+        "invalid_pct": 4.695129,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_40936": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 0.0,
+        "invalid_pct": 17.857742,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_44682": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.499344,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_470303": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 3.984833,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_482517": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 18.101501,
+        "invalid_pct": 0.970459,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_48673": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.050735,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_511199": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 4.403687,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_54421": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.015259,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_581976": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 56.765747,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_59731": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 1.056671,
+        "invalid_pct": 2.474976,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_605682": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 28.778076,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_62897": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 15.694427,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_648632": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 7.016754,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_651904": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 10.359192,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_657443": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 24.785614,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_683296": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 2.826309,
+        "invalid_pct": 0.978851,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_721886": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 4.17099,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_76868": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 6.745529,
+        "invalid_pct": 0.008774,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_7894": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 0.0,
+        "invalid_pct": 22.87178,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Paraguay_790830": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 12.186813,
+        "invalid_pct": 0.360489,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_791364": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.460052,
+        "invalid_pct": 0.156021,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_792268": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 0.513458,
+        "invalid_pct": 0.009155,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_795075": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 1.305008,
+        "invalid_pct": 0.002289,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_80102": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 0.008392,
+        "invalid_pct": 0.000381,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_822142": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 30.590057,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_868895": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 6.022263,
+        "invalid_pct": 33.065414,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_892933": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 10.135651,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_896458": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 18.806076,
+        "invalid_pct": 8.188629,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_913449": {
+        "split": "test",
+        "event_location": "Paraguay",
+        "water_pct": 2.104568,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_921838": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 2.803802,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_934240": {
+        "split": "valid",
+        "event_location": "Paraguay",
+        "water_pct": 7.765961,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_989230": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 13.958359,
+        "invalid_pct": 16.105652,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Paraguay_997480": {
+        "split": "train",
+        "event_location": "Paraguay",
+        "water_pct": 7.609177,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_1068756": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 2.477646,
+        "invalid_pct": 34.397507,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_1087508": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 3.822708,
+        "invalid_pct": 18.768692,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_12849": {
+        "split": "valid",
+        "event_location": "Somalia",
+        "water_pct": 14.187622,
+        "invalid_pct": 27.024078,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_166342": {
+        "split": "test",
+        "event_location": "Somalia",
+        "water_pct": 0.004578,
+        "invalid_pct": 15.856552,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_167787": {
+        "split": "valid",
+        "event_location": "Somalia",
+        "water_pct": 0.085831,
+        "invalid_pct": 15.884018,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_195014": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 0.0,
+        "invalid_pct": 10.869598,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Somalia_205466": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 0.035477,
+        "invalid_pct": 8.415604,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_230192": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 0.022125,
+        "invalid_pct": 11.299896,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_256539": {
+        "split": "valid",
+        "event_location": "Somalia",
+        "water_pct": 0.008774,
+        "invalid_pct": 15.59639,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_295782": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 6.194687,
+        "invalid_pct": 22.543335,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_322855": {
+        "split": "test",
+        "event_location": "Somalia",
+        "water_pct": 17.065811,
+        "invalid_pct": 2.708435,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_32375": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 0.000381,
+        "invalid_pct": 48.846436,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_371421": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 13.228607,
+        "invalid_pct": 11.894989,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_60129": {
+        "split": "test",
+        "event_location": "Somalia",
+        "water_pct": 0.258255,
+        "invalid_pct": 15.193176,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_61368": {
+        "split": "valid",
+        "event_location": "Somalia",
+        "water_pct": 0.0,
+        "invalid_pct": 18.758774,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Somalia_626316": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 8.288193,
+        "invalid_pct": 35.499191,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_649376": {
+        "split": "valid",
+        "event_location": "Somalia",
+        "water_pct": 1.978683,
+        "invalid_pct": 18.392563,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_685158": {
+        "split": "test",
+        "event_location": "Somalia",
+        "water_pct": 9.633636,
+        "invalid_pct": 29.743958,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_699062": {
+        "split": "test",
+        "event_location": "Somalia",
+        "water_pct": 1.255035,
+        "invalid_pct": 22.481918,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_7931": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 0.0,
+        "invalid_pct": 22.953796,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Somalia_886726": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 31.66008,
+        "invalid_pct": 0.041199,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_93023": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 0.0,
+        "invalid_pct": 28.350449,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Somalia_94102": {
+        "split": "test",
+        "event_location": "Somalia",
+        "water_pct": 4.842377,
+        "invalid_pct": 7.928467,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_970508": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 14.538574,
+        "invalid_pct": 17.175674,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Somalia_989553": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 0.880051,
+        "invalid_pct": 57.922745,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Somalia_992457": {
+        "split": "train",
+        "event_location": "Somalia",
+        "water_pct": 2.9953,
+        "invalid_pct": 30.900574,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_1167260": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 16.219711,
+        "invalid_pct": 0.009537,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_1199913": {
+        "split": "valid",
+        "event_location": "Spain",
+        "water_pct": 3.84903,
+        "invalid_pct": 0.000381,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_2472849": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 0.007629,
+        "invalid_pct": 0.146866,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_2523247": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 0.92659,
+        "invalid_pct": 0.040054,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_2594119": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 1.097488,
+        "invalid_pct": 0.051498,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_2938657": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 3.727722,
+        "invalid_pct": 0.026703,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_3285448": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 21.510696,
+        "invalid_pct": 0.003052,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_337094": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 9.946823,
+        "invalid_pct": 0.033569,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_4282030": {
+        "split": "valid",
+        "event_location": "Spain",
+        "water_pct": 37.434006,
+        "invalid_pct": 0.008011,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_4915752": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 2.923584,
+        "invalid_pct": 0.006104,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_5650136": {
+        "split": "test",
+        "event_location": "Spain",
+        "water_pct": 39.751816,
+        "invalid_pct": 34.541321,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_5678382": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 1.361847,
+        "invalid_pct": 0.0103,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_5816638": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 0.144577,
+        "invalid_pct": 0.035095,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_5923267": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 76.947403,
+        "invalid_pct": 16.556168,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_6095801": {
+        "split": "test",
+        "event_location": "Spain",
+        "water_pct": 8.673096,
+        "invalid_pct": 0.031281,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_6199994": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 0.298691,
+        "invalid_pct": 0.092316,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_6537196": {
+        "split": "valid",
+        "event_location": "Spain",
+        "water_pct": 1.161957,
+        "invalid_pct": 0.014496,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_6860600": {
+        "split": "test",
+        "event_location": "Spain",
+        "water_pct": 0.093842,
+        "invalid_pct": 0.066757,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_716716": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 1.008606,
+        "invalid_pct": 0.029373,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_7370579": {
+        "split": "test",
+        "event_location": "Spain",
+        "water_pct": 26.716232,
+        "invalid_pct": 0.037766,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_7387658": {
+        "split": "test",
+        "event_location": "Spain",
+        "water_pct": 58.367157,
+        "invalid_pct": 0.033188,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_7558720": {
+        "split": "test",
+        "event_location": "Spain",
+        "water_pct": 0.815201,
+        "invalid_pct": 0.061035,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_7604243": {
+        "split": "valid",
+        "event_location": "Spain",
+        "water_pct": 7.979965,
+        "invalid_pct": 0.024414,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_7786924": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 1.437378,
+        "invalid_pct": 0.012589,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_7856615": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 3.676224,
+        "invalid_pct": 0.081635,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_8104659": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 1.329041,
+        "invalid_pct": 0.006104,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_8154154": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 1.747894,
+        "invalid_pct": 0.009918,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_8199661": {
+        "split": "train",
+        "event_location": "Spain",
+        "water_pct": 3.121185,
+        "invalid_pct": 0.041199,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_8372658": {
+        "split": "valid",
+        "event_location": "Spain",
+        "water_pct": 35.516357,
+        "invalid_pct": 0.043869,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Spain_8565131": {
+        "split": "valid",
+        "event_location": "Spain",
+        "water_pct": 19.972229,
+        "invalid_pct": 0.022888,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_101973": {
+        "split": "valid",
+        "event_location": "Sri-Lanka",
+        "water_pct": 1.128387,
+        "invalid_pct": 0.000381,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_1038087": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 6.90918,
+        "invalid_pct": 0.000381,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_1049830": {
+        "split": "test",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.983047,
+        "invalid_pct": 27.43187,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_117737": {
+        "split": "test",
+        "event_location": "Sri-Lanka",
+        "water_pct": 2.567673,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_120804": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 2.654266,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_132922": {
+        "split": "valid",
+        "event_location": "Sri-Lanka",
+        "water_pct": 6.806564,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_135713": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.0,
+        "invalid_pct": 48.757172,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Sri-Lanka_14484": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 14.826202,
+        "invalid_pct": 11.493301,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_152185": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.83847,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_163406": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 1.934052,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_178753": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.246048,
+        "invalid_pct": 3.155136,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_233609": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 2.623367,
+        "invalid_pct": 1.916504,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_236030": {
+        "split": "valid",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.653458,
+        "invalid_pct": 21.383667,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_236628": {
+        "split": "valid",
+        "event_location": "Sri-Lanka",
+        "water_pct": 1.175308,
+        "invalid_pct": 0.000763,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_249079": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.004196,
+        "invalid_pct": 37.143326,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_31559": {
+        "split": "valid",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.177002,
+        "invalid_pct": 16.536331,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_321316": {
+        "split": "valid",
+        "event_location": "Sri-Lanka",
+        "water_pct": 36.966324,
+        "invalid_pct": 0.004196,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_377277": {
+        "split": "test",
+        "event_location": "Sri-Lanka",
+        "water_pct": 3.281784,
+        "invalid_pct": 1.051331,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_400518": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.907898,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_450918": {
+        "split": "test",
+        "event_location": "Sri-Lanka",
+        "water_pct": 1.631546,
+        "invalid_pct": 62.186432,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Sri-Lanka_49764": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.948334,
+        "invalid_pct": 7.178116,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_52223": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.0,
+        "invalid_pct": 0.0,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "Sri-Lanka_523539": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 9.410477,
+        "invalid_pct": 16.656113,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_534068": {
+        "split": "test",
+        "event_location": "Sri-Lanka",
+        "water_pct": 98.139954,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_551926": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 7.476807,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_55568": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 5.82428,
+        "invalid_pct": 18.801117,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_579082": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 5.518341,
+        "invalid_pct": 20.55397,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_612594": {
+        "split": "valid",
+        "event_location": "Sri-Lanka",
+        "water_pct": 16.450882,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_63307": {
+        "split": "valid",
+        "event_location": "Sri-Lanka",
+        "water_pct": 2.672195,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_649970": {
+        "split": "test",
+        "event_location": "Sri-Lanka",
+        "water_pct": 6.615829,
+        "invalid_pct": 0.491714,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_653336": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 6.859589,
+        "invalid_pct": 0.001144,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_713926": {
+        "split": "test",
+        "event_location": "Sri-Lanka",
+        "water_pct": 30.710602,
+        "invalid_pct": 0.015259,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_748447": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.465012,
+        "invalid_pct": 4.942703,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_845821": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 89.472198,
+        "invalid_pct": 8.158112,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_847275": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 19.250488,
+        "invalid_pct": 11.742783,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_849649": {
+        "split": "test",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.721741,
+        "invalid_pct": 16.760635,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_85652": {
+        "split": "valid",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.740433,
+        "invalid_pct": 24.710083,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_883641": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 5.149841,
+        "invalid_pct": 0.0,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_916628": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 31.098938,
+        "invalid_pct": 0.832748,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_922192": {
+        "split": "test",
+        "event_location": "Sri-Lanka",
+        "water_pct": 0.392914,
+        "invalid_pct": 8.530045,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_92824": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 21.129608,
+        "invalid_pct": 5.965424,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "Sri-Lanka_956740": {
+        "split": "train",
+        "event_location": "Sri-Lanka",
+        "water_pct": 3.020477,
+        "invalid_pct": 22.916794,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_1010394": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.564957,
+        "invalid_pct": 0.004959,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_1039203": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 0.614548,
+        "invalid_pct": 0.012207,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_1049586": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 0.809479,
+        "invalid_pct": 0.031662,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_1068362": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 11.894989,
+        "invalid_pct": 0.007629,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_1082482": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 0.841522,
+        "invalid_pct": 0.005341,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_11422": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 13.74054,
+        "invalid_pct": 0.000763,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_114964": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.13504,
+        "invalid_pct": 0.007248,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_115033": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.899887,
+        "invalid_pct": 0.013351,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_170264": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 16.607285,
+        "invalid_pct": 0.061798,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_179917": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.194931,
+        "invalid_pct": 0.019073,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_181263": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.406265,
+        "invalid_pct": 20.589066,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_181503": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.455475,
+        "invalid_pct": 0.011063,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_19225": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 0.530624,
+        "invalid_pct": 0.008392,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_198411": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 3.332901,
+        "invalid_pct": 67.871857,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "USA_211406": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.431061,
+        "invalid_pct": 0.016403,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_217598": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 17.263412,
+        "invalid_pct": 1.725388,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_224165": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.061417,
+        "invalid_pct": 0.006866,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_225017": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 6.401062,
+        "invalid_pct": 0.002289,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_231124": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 1.464462,
+        "invalid_pct": 50.634384,
+        "recommendation": "warning_review",
+        "status": "warning"
+      },
+      "USA_232060": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.653458,
+        "invalid_pct": 0.006485,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_251323": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 0.265121,
+        "invalid_pct": 0.421906,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_260929": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 1.914978,
+        "invalid_pct": 0.003815,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_275372": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 1.038361,
+        "invalid_pct": 0.002289,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_308150": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 1.108932,
+        "invalid_pct": 0.044632,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_347609": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.626373,
+        "invalid_pct": 22.021484,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_348639": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 10.358429,
+        "invalid_pct": 0.009918,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_350244": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 0.490189,
+        "invalid_pct": 0.009155,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_354981": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.657654,
+        "invalid_pct": 0.050735,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_366607": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 18.815994,
+        "invalid_pct": 0.001907,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_375183": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 2.48642,
+        "invalid_pct": 0.030136,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_387945": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 5.131912,
+        "invalid_pct": 0.001907,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_430764": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 5.889511,
+        "invalid_pct": 0.00267,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_438959": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 2.472305,
+        "invalid_pct": 0.92659,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_486103": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 2.762604,
+        "invalid_pct": 0.032043,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_504150": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 1.244354,
+        "invalid_pct": 0.006866,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_519181": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 0.820923,
+        "invalid_pct": 0.006485,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_527077": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 0.627899,
+        "invalid_pct": 0.006485,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_58086": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 6.06308,
+        "invalid_pct": 0.012207,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_595451": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 7.831955,
+        "invalid_pct": 0.003052,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_604222": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 2.53334,
+        "invalid_pct": 0.008011,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_605492": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 1.156235,
+        "invalid_pct": 0.007248,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_638521": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 1.96991,
+        "invalid_pct": 0.001144,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_646878": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 0.924683,
+        "invalid_pct": 3.498077,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_652955": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 3.252792,
+        "invalid_pct": 0.001144,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_655230": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.436783,
+        "invalid_pct": 0.005722,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_66026": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.376511,
+        "invalid_pct": 0.001144,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_664261": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 1.836777,
+        "invalid_pct": 0.011063,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_66511": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 1.040268,
+        "invalid_pct": 0.003052,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_670826": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 1.148224,
+        "invalid_pct": 0.004578,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_67102": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 3.620529,
+        "invalid_pct": 0.020218,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_693819": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.936127,
+        "invalid_pct": 0.015259,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_741073": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 1.28746,
+        "invalid_pct": 0.011063,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_741178": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 0.551605,
+        "invalid_pct": 0.0103,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_758178": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 0.616837,
+        "invalid_pct": 0.004196,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_761032": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 4.622269,
+        "invalid_pct": 0.007248,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_770353": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 13.132858,
+        "invalid_pct": 0.001144,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_778194": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 1.464081,
+        "invalid_pct": 0.028229,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_788696": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 42.514038,
+        "invalid_pct": 0.006866,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_806273": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 2.207565,
+        "invalid_pct": 0.004959,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_826217": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 1.715851,
+        "invalid_pct": 0.006866,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_831672": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 7.994461,
+        "invalid_pct": 0.010681,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_84195": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 1.453781,
+        "invalid_pct": 0.00267,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_86502": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 25.315094,
+        "invalid_pct": 0.004578,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_905409": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 16.962814,
+        "invalid_pct": 0.017166,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_908474": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.704193,
+        "invalid_pct": 0.027847,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_933610": {
+        "split": "test",
+        "event_location": "USA",
+        "water_pct": 1.458359,
+        "invalid_pct": 0.044632,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_955053": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 13.671112,
+        "invalid_pct": 0.001526,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_986268": {
+        "split": "valid",
+        "event_location": "USA",
+        "water_pct": 3.468323,
+        "invalid_pct": 0.008011,
+        "recommendation": "keep",
+        "status": "ok"
+      },
+      "USA_994009": {
+        "split": "train",
+        "event_location": "USA",
+        "water_pct": 0.723648,
+        "invalid_pct": 0.048065,
+        "recommendation": "keep",
+        "status": "ok"
+      }
+    }
+  },
+  "image_statistics": {
+    "S1Hand": {
+      "layer": "S1Hand",
+      "sample_count": 446,
+      "band_count_distribution": {
+        "2": 446
+      },
+      "dtype_distribution": {
+        "float32,float32": 446
+      },
+      "nan_ratio_summary": {
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "mean": 0.021483,
+        "p75": 0.0,
+        "max": 1.0
+      },
+      "inf_ratio_summary": {
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "p75": 0.0,
+        "max": 0.0
+      },
+      "band_min_summary": {
+        "1": {
+          "min": -89.785759,
+          "p25": -39.452103,
+          "median": -31.04476,
+          "mean": -33.290789,
+          "p75": -26.310658,
+          "max": -18.177559
+        },
+        "2": {
+          "min": -103.87603,
+          "p25": -49.574551,
+          "median": -47.416183,
+          "mean": -46.440028,
+          "p75": -44.171337,
+          "max": -25.849567
+        }
+      },
+      "band_max_summary": {
+        "1": {
+          "min": -3.867437,
+          "p25": 0.748637,
+          "median": 7.687287,
+          "mean": 7.991475,
+          "p75": 13.662563,
+          "max": 36.832024
+        },
+        "2": {
+          "min": -9.654788,
+          "p25": -6.866971,
+          "median": -3.916813,
+          "mean": -1.558275,
+          "p75": 2.705688,
+          "max": 17.376385
+        }
+      },
+      "extreme_min": {
+        "tile_id": "Bolivia_233925",
+        "band": 2,
+        "value": -103.87602996826172
+      },
+      "extreme_max": {
+        "tile_id": "Spain_8372658",
+        "band": 1,
+        "value": 36.83202362060547
+      }
+    },
+    "S2Hand": {
+      "layer": "S2Hand",
+      "sample_count": 446,
+      "band_count_distribution": {
+        "13": 446
+      },
+      "dtype_distribution": {
+        "int16,int16,int16,int16,int16,int16,int16,int16,int16,int16,int16,int16,int16": 446
+      },
+      "nan_ratio_summary": {
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "p75": 0.0,
+        "max": 0.0
+      },
+      "inf_ratio_summary": {
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "p75": 0.0,
+        "max": 0.0
+      },
+      "band_min_summary": {
+        "1": {
+          "min": 0.0,
+          "p25": 1121.25,
+          "median": 1233.0,
+          "mean": 1196.143498,
+          "p75": 1328.75,
+          "max": 2208.0
+        },
+        "2": {
+          "min": 0.0,
+          "p25": 790.25,
+          "median": 884.5,
+          "mean": 882.950673,
+          "p75": 989.0,
+          "max": 1914.0
+        },
+        "3": {
+          "min": 0.0,
+          "p25": 602.25,
+          "median": 676.0,
+          "mean": 713.221973,
+          "p75": 819.0,
+          "max": 1726.0
+        },
+        "4": {
+          "min": 0.0,
+          "p25": 373.25,
+          "median": 442.0,
+          "mean": 490.713004,
+          "p75": 564.75,
+          "max": 1524.0
+        },
+        "5": {
+          "min": 0.0,
+          "p25": 409.0,
+          "median": 498.5,
+          "mean": 574.681614,
+          "p75": 691.75,
+          "max": 1701.0
+        },
+        "6": {
+          "min": 0.0,
+          "p25": 444.25,
+          "median": 577.0,
+          "mean": 725.105381,
+          "p75": 931.75,
+          "max": 2635.0
+        },
+        "7": {
+          "min": 0.0,
+          "p25": 469.25,
+          "median": 627.5,
+          "mean": 811.856502,
+          "p75": 1052.25,
+          "max": 3068.0
+        },
+        "8": {
+          "min": 0.0,
+          "p25": 422.0,
+          "median": 553.5,
+          "mean": 691.778027,
+          "p75": 839.75,
+          "max": 2777.0
+        },
+        "9": {
+          "min": 0.0,
+          "p25": 402.25,
+          "median": 575.0,
+          "mean": 780.394619,
+          "p75": 993.5,
+          "max": 3281.0
+        },
+        "10": {
+          "min": 0.0,
+          "p25": 73.0,
+          "median": 126.5,
+          "mean": 161.156951,
+          "p75": 195.0,
+          "max": 1154.0
+        },
+        "11": {
+          "min": 0.0,
+          "p25": 4.0,
+          "median": 9.0,
+          "mean": 32.410314,
+          "p75": 31.0,
+          "max": 890.0
+        },
+        "12": {
+          "min": 0.0,
+          "p25": 150.25,
+          "median": 269.0,
+          "mean": 405.547085,
+          "p75": 498.75,
+          "max": 1880.0
+        },
+        "13": {
+          "min": 0.0,
+          "p25": 73.25,
+          "median": 139.5,
+          "mean": 217.32287,
+          "p75": 272.25,
+          "max": 1266.0
+        }
+      },
+      "band_max_summary": {
+        "1": {
+          "min": 0.0,
+          "p25": 1872.25,
+          "median": 2896.0,
+          "mean": 3619.432735,
+          "p75": 5087.5,
+          "max": 9994.0
+        },
+        "2": {
+          "min": 0.0,
+          "p25": 2826.75,
+          "median": 4304.0,
+          "mean": 4522.022422,
+          "p75": 5751.0,
+          "max": 19182.0
+        },
+        "3": {
+          "min": 0.0,
+          "p25": 2827.75,
+          "median": 4291.5,
+          "mean": 4548.504484,
+          "p75": 5818.0,
+          "max": 15100.0
+        },
+        "4": {
+          "min": 0.0,
+          "p25": 2993.5,
+          "median": 4611.5,
+          "mean": 4875.410314,
+          "p75": 6322.0,
+          "max": 17418.0
+        },
+        "5": {
+          "min": 0.0,
+          "p25": 2665.5,
+          "median": 3868.5,
+          "mean": 4390.580717,
+          "p75": 5911.25,
+          "max": 10975.0
+        },
+        "6": {
+          "min": 0.0,
+          "p25": 3917.5,
+          "median": 4575.0,
+          "mean": 5254.455157,
+          "p75": 6494.0,
+          "max": 11847.0
+        },
+        "7": {
+          "min": 0.0,
+          "p25": 4831.75,
+          "median": 5540.5,
+          "mean": 6019.331839,
+          "p75": 6957.75,
+          "max": 12611.0
+        },
+        "8": {
+          "min": 0.0,
+          "p25": 4683.5,
+          "median": 5439.5,
+          "mean": 5869.88565,
+          "p75": 6731.5,
+          "max": 19199.0
+        },
+        "9": {
+          "min": 0.0,
+          "p25": 5173.5,
+          "median": 5885.0,
+          "mean": 6383.190583,
+          "p75": 7315.75,
+          "max": 13253.0
+        },
+        "10": {
+          "min": 0.0,
+          "p25": 620.0,
+          "median": 1011.5,
+          "mean": 1093.975336,
+          "p75": 1432.5,
+          "max": 3947.0
+        },
+        "11": {
+          "min": 0.0,
+          "p25": 18.0,
+          "median": 49.0,
+          "mean": 134.869955,
+          "p75": 125.0,
+          "max": 1735.0
+        },
+        "12": {
+          "min": 0.0,
+          "p25": 3943.0,
+          "median": 4889.5,
+          "mean": 5152.502242,
+          "p75": 6226.75,
+          "max": 15031.0
+        },
+        "13": {
+          "min": 0.0,
+          "p25": 3072.25,
+          "median": 3942.5,
+          "mean": 4079.986547,
+          "p75": 4873.25,
+          "max": 13472.0
+        }
+      },
+      "extreme_min": {
+        "tile_id": "Bolivia_103757",
+        "band": 1,
+        "value": 0.0
+      },
+      "extreme_max": {
+        "tile_id": "USA_504150",
+        "band": 8,
+        "value": 19199.0
+      }
+    }
+  },
+  "generated_figures": [
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/samples_per_split.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/samples_per_event_location.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/status_counts.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/cleaning_recommendation_counts.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/water_percentage_histogram.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/invalid_percentage_histogram.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/water_percentage_by_split.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/invalid_percentage_by_split.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/water_percentage_by_event_location.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/invalid_percentage_by_event_location.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/s1_minmax_distributions.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/s2_minmax_distributions.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_random_keep_USA_347609.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_random_keep_India_383430.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_random_keep_Bolivia_76104.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_random_keep_Nigeria_812045.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_random_warning_review_India_979278.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_random_warning_review_India_136196.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_random_warning_review_Ghana_194723.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_random_warning_review_Ghana_161233.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_no_water_Paraguay_36146.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_no_water_Somalia_61368.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_no_water_Pakistan_740461.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_no_water_Ghana_142312.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_high_invalid_ratio_USA_231124.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_high_invalid_ratio_Pakistan_528249.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_high_invalid_ratio_Ghana_132163.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_high_invalid_ratio_Bolivia_294583.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_exclude_candidate_Ghana_234935.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_exclude_candidate_Ghana_26376.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_exclude_candidate_Ghana_277.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_exclude_candidate_Ghana_5079.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_exclude_candidate_Ghana_83483.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_split_train_Ghana_103272.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_split_valid_Ghana_1033830.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_split_test_Ghana_1078550.png",
+    "C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/figures/panel_split_bolivia_Bolivia_129334.png"
+  ]
+}

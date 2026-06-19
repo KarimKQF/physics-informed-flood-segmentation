@@ -1,0 +1,26 @@
+datasets:
+  sen1floods11:
+    root: data/raw/Sen1Floods11
+    source: gs://sen1floods11
+    expected_format: geotiff
+    status: partial
+    note: Download interrupted after catalog/metadata files; rerun gsutil rsync to resume.
+
+  sturm_flood:
+    root: data/raw/STURM-Flood
+    source: https://doi.org/10.5281/zenodo.12748982
+    expected_format: geotiff_or_mixed
+    status: manual_required
+
+future_data:
+  dem:
+    root: data/dem
+    status: planned
+    note: DEMs will be added after validating the base segmentation datasets.
+
+  building_masks:
+    status: planned
+    sources:
+      - OpenStreetMap building=*
+      - Microsoft Global ML Building Footprints
+      - Google Open Buildings

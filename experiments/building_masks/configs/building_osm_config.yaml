@@ -1,0 +1,23 @@
+query_mode: place
+place_name: "Saint-Étienne-du-Rouvray, Seine-Maritime, Normandie, France"
+
+bbox:
+  north: 49.40
+  south: 49.35
+  east: 1.15
+  west: 1.05
+
+osm_tags:
+  building: true
+
+outputs:
+  geojson_path: outputs/geojson/osm_buildings_saint_etienne_du_rouvray.geojson
+  static_png_path: outputs/figures/osm_buildings_saint_etienne_du_rouvray.png
+  interactive_html_path: outputs/maps/osm_buildings_saint_etienne_du_rouvray.html
+
+raster:
+  enabled: true
+  resolution_meters: 10
+  reference_raster: ""
+  output_path: outputs/building_mask.tif
+  all_touched: true

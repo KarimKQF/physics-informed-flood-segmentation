@@ -1,15 +1,6 @@
-data_root: "D:/urban_runoff_data"
-
-raw:
-  sen1floods11: "D:/urban_runoff_data/raw/Sen1Floods11"
-  sturm_flood: "D:/urban_runoff_data/raw/STURM-Flood"
-  dem: "D:/urban_runoff_data/raw/DEM"
-
-processed:
-  sen1floods11: "D:/urban_runoff_data/processed/Sen1Floods11"
-  sturm_flood: "D:/urban_runoff_data/processed/STURM-Flood"
-  aligned_dem: "D:/urban_runoff_data/processed/aligned_dem"
-
-manifests: "D:/urban_runoff_data/manifests"
-logs: "D:/urban_runoff_data/logs"
-tmp: "D:/urban_runoff_data/tmp"
+sen1floods11_root: "E:/flood_research/data/raw/sen1floods11"
+sturm_flood_root: "E:/flood_research/data/raw/sturm_flood"
+experiment_root: "E:/flood_research/experiments"
+checkpoints_root: "E:/flood_research/experiments/checkpoints"
+predictions_root: "E:/flood_research/experiments/predictions"
+reports_root: "C:/Users/Karim/Desktop/flood-segmentation-training/physics-informed-flood-segmentation/reports"

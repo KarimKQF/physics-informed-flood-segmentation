@@ -1,11 +1,14 @@
 # Data
 data/
 D:/flood_research/data/
+E:/flood_research/data/
 **/data/raw/
 **/data/processed/
 **/data/interim/
 **/data/external/
 **/data/dem/
+*.tif
+*.tiff
 **/data/**/*.tif
 **/data/**/*.tiff
 **/data/**/*.png
@@ -69,6 +72,7 @@ cache/
 *.zip
 *.tar
 *.tar.gz
+*.gz
 *.7z
 
 # Geospatial artifacts that should be regenerated or downloaded separately

@@ -1,0 +1,53 @@
+step: 5S
+status: stub_only_not_launched
+training_started: false
+
+model: TerraMind-L pretrained + UPerNet
+model_details:
+  backbone: terramind_v1_large
+  backbone_checkpoint: E:/flood_research/experiments/terramind_baseline/checkpoints/pretrained/TerraMind_v1_large.pt
+  decoder: UperNetDecoder
+  current_step5p_neck_indices: [2, 5, 8, 11]
+  audit_note: validate TerraMind-L large-backbone indices [5, 11, 17, 23] before launch if architecture parity is required
+  backbone_modalities: [S2L1C, S1GRD]
+  backbone_merge_method: mean
+  freeze_backbone: false
+  freeze_decoder: false
+
+dataset:
+  name: Sen1Floods11
+  protocol: current_filtered_protocol_step5e
+  train_split: E:/flood_research/experiments/terramind_baseline/runs/step5e_tiny_unetdecoder_baseline/manifests/flood_train_step5e_filtered.txt
+  val_split: E:/flood_research/experiments/terramind_baseline/runs/step5e_tiny_unetdecoder_baseline/manifests/flood_valid_step5e_filtered.txt
+  test_split: E:/flood_research/experiments/terramind_baseline/runs/step5e_tiny_unetdecoder_baseline/manifests/flood_test_step5e_filtered.txt
+  bolivia_split: E:/flood_research/experiments/terramind_baseline/runs/step5e_tiny_unetdecoder_baseline/manifests/flood_bolivia_step5e_filtered.txt
+  excluded_fully_invalid_tile_ids: [Ghana_234935, Ghana_26376, Ghana_277, Ghana_5079, Ghana_83483]
+  keep_no_water_samples: true
+  keep_warning_review_samples: true
+  ignore_index: -1
+
+inputs:
+  modalities: [S2L1C, S1GRD]
+  no_dem_input: true
+  no_topographic_input: true
+
+loss:
+  name: ce_dice
+  formula: lambda_ce * cross_entropy + lambda_dice * dice
+  lambda_ce: 0.5
+  lambda_dice: 0.5
+  ignore_index: -1
+  physics_loss: false
+  topographic_loss: false
+
+comparison:
+  baseline_targets: [STEP_5O, STEP_5I]
+  secondary_reference: STEP_5P
+  primary_metric: validation_miou
+  guardrail_metrics: [test_miou, bolivia_miou, water_iou, no_water_false_positive_behavior]
+
+launch_guardrails:
+  no_training_in_step5r: true
+  raw_data_modified: false
+  official_split_files_modified: false
+  requires_human_validation_before_launch: true

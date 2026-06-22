@@ -1,0 +1,20 @@
+model:
+  name: TerraMind base pretrained + UNetDecoder
+  classical_baseline_step: STEP 5I
+  role: control_physics_baseline
+topography:
+  manifest_path: "E:/flood_research/experiments/terramind_baseline/runs/step6b4_full_dem_alignment/manifests/topography_full_manifest.csv"
+  topography_type: dem_copernicus_glo30
+  source: Copernicus DEM GLO-30
+  source_limitation: "DSM-like elevation product, not HAND or guaranteed bare-earth DTM"
+physics_loss:
+  lambda_candidates:
+    - 0.01
+    - 0.05
+    - 0.1
+  ignore_index: -1
+  status: ready_for_human_review_before_physics_training
+guards:
+  full_topographic_alignment_required: true
+  human_validation_required: true
+  physics_loss_training_started: false

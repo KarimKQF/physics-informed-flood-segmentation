@@ -1,0 +1,35 @@
+step: 6A
+status: secondary_control_experiment
+experiment_type: future_physics_informed_training_stub
+
+model:
+  name: TerraMind base pretrained + UNetDecoder
+  role: control_physics_baseline
+
+classical_baseline:
+  step: 5I
+  run_dir: E:/flood_research/experiments/terramind_baseline/runs/step5i_base_unetdecoder_pretrained
+  best_checkpoint: E:/flood_research/experiments/terramind_baseline/runs/step5i_base_unetdecoder_pretrained/checkpoints/best_checkpoint.pt
+
+loss:
+  segmentation: cross_entropy
+  physics: TopographicInconsistencyLoss
+  lambda_topo_candidates:
+    - 0.01
+    - 0.05
+    - 0.1
+  ignore_index: -1
+  water_class: 1
+  elevation_margin: 0.0
+  elevation_scale: 1.0
+  neighborhood: "4"
+
+topography:
+  path: TBD
+  alignment_status: not_validated
+
+guards:
+  physics_loss_training_started: false
+  darn_started: false
+  sturm_training_started: false
+  raw_data_modified: false

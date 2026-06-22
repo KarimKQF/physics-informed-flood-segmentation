@@ -1,0 +1,29 @@
+2026-06-20 12:13:25,398 INFO Starting STEP 5I base pretrained baseline.
+2026-06-20 12:13:25,424 INFO No TerraMind-L, UPerNet, DARN, STURM-Flood, physics loss, or raw-data modification will be started.
+2026-06-20 12:13:25,645 INFO Downloading official TerraMind base checkpoint from https://huggingface.co/ibm-esa-geospatial/TerraMind-1.0-base/resolve/main/TerraMind_v1_base.pt
+2026-06-20 12:13:28,951 INFO Downloaded 128.0 MiB
+2026-06-20 12:13:31,091 INFO Downloaded 256.0 MiB
+2026-06-20 12:13:33,581 INFO Downloaded 384.0 MiB
+2026-06-20 12:13:36,234 INFO Downloaded 512.0 MiB
+2026-06-20 12:13:38,805 INFO Downloaded 640.0 MiB
+2026-06-20 12:13:41,873 INFO Downloaded 768.0 MiB
+2026-06-20 12:13:44,722 INFO Downloaded 896.0 MiB
+2026-06-20 12:13:46,859 INFO Downloaded 1024.0 MiB
+2026-06-20 12:13:48,978 INFO Downloaded 1152.0 MiB
+2026-06-20 12:13:51,140 INFO Downloaded 1280.0 MiB
+2026-06-20 12:13:53,324 INFO Downloaded 1408.0 MiB
+2026-06-20 12:13:55,441 INFO Verified TerraMind base checkpoint at E:\flood_research\experiments\terramind_baseline\checkpoints\pretrained\TerraMind_v1_base.pt
+2026-06-20 12:13:55,464 INFO Running STEP 5I base pretrained smoke forward.
+2026-06-20 12:14:08,839 INFO Smoke forward OK: output_shape=[1, 2, 512, 512] loss=0.955160
+2026-06-20 12:15:34,561 INFO epoch=1 train_loss=0.452735 val_loss=0.243466 val_miou=0.788665 val_iou_water=0.627923 precision=32
+2026-06-20 12:16:59,929 INFO epoch=2 train_loss=0.293508 val_loss=0.218383 val_miou=0.767276 val_iou_water=0.592330 precision=32
+2026-06-20 12:18:24,858 INFO epoch=3 train_loss=0.230807 val_loss=0.162122 val_miou=0.827344 val_iou_water=0.697181 precision=32
+2026-06-20 12:19:51,475 INFO epoch=4 train_loss=0.192912 val_loss=0.196973 val_miou=0.835632 val_iou_water=0.713103 precision=32
+2026-06-20 12:21:17,187 INFO epoch=5 train_loss=0.171529 val_loss=0.136926 val_miou=0.843346 val_iou_water=0.722938 precision=32
+2026-06-20 12:22:01,261 INFO Saved 86 valid predictions to E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\predictions\valid
+2026-06-20 12:22:01,283 INFO Running evaluator: E:\flood_research\venvs\terramind-gpu\Scripts\python.exe C:\Users\Karim\Desktop\flood-segmentation-training\physics-informed-flood-segmentation\scripts\05_evaluate_predictions.py --prediction-dir E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\predictions\valid --manifest-csv E:\flood_research\experiments\terramind_baseline\runs\step5e_tiny_unetdecoder_baseline\manifests\sen1floods11_handlabeled_index_e_paths.csv --output-csv E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\metrics\valid_per_tile_metrics.csv --output-grouped-csv E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\metrics\valid_grouped_metrics.csv --output-summary-json E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\metrics\valid_summary.json --split valid
+2026-06-20 12:22:27,850 INFO Saved 89 test predictions to E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\predictions\test
+2026-06-20 12:22:27,853 INFO Running evaluator: E:\flood_research\venvs\terramind-gpu\Scripts\python.exe C:\Users\Karim\Desktop\flood-segmentation-training\physics-informed-flood-segmentation\scripts\05_evaluate_predictions.py --prediction-dir E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\predictions\test --manifest-csv E:\flood_research\experiments\terramind_baseline\runs\step5e_tiny_unetdecoder_baseline\manifests\sen1floods11_handlabeled_index_e_paths.csv --output-csv E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\metrics\test_per_tile_metrics.csv --output-grouped-csv E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\metrics\test_grouped_metrics.csv --output-summary-json E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\metrics\test_summary.json --split test
+2026-06-20 12:22:37,378 INFO Saved 15 bolivia predictions to E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\predictions\bolivia
+2026-06-20 12:22:37,380 INFO Running evaluator: E:\flood_research\venvs\terramind-gpu\Scripts\python.exe C:\Users\Karim\Desktop\flood-segmentation-training\physics-informed-flood-segmentation\scripts\05_evaluate_predictions.py --prediction-dir E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\predictions\bolivia --manifest-csv E:\flood_research\experiments\terramind_baseline\runs\step5e_tiny_unetdecoder_baseline\manifests\sen1floods11_handlabeled_index_e_paths.csv --output-csv E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\metrics\bolivia_per_tile_metrics.csv --output-grouped-csv E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\metrics\bolivia_grouped_metrics.csv --output-summary-json E:\flood_research\experiments\terramind_baseline\runs\step5i_base_unetdecoder_pretrained\metrics\bolivia_summary.json --split bolivia
+2026-06-20 12:22:38,034 INFO STEP 5I complete. Human validation required before starting STEP 5J — decide between longer stable training, UPerNet adaptation, or full-model memory test.

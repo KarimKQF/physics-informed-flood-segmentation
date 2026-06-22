@@ -1,0 +1,4 @@
+2026-06-20 12:49:44,854 INFO Starting STEP 5J controlled UPerNet adaptation.
+2026-06-20 12:49:44,867 INFO No TerraMind-L, base UPerNet training, DARN, STURM-Flood, physics loss, or raw-data modification will be started.
+2026-06-20 12:49:56,258 INFO Running tiny UPerNet smoke forward.
+2026-06-20 12:49:57,386 INFO tiny smoke forward OK: output_shape=[1, 2, 512, 512] loss=22.076750

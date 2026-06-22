@@ -1,0 +1,98 @@
+2026-06-20 12:46:46,246 INFO Starting STEP 5J controlled UPerNet adaptation.
+2026-06-20 12:46:46,281 INFO No TerraMind-L, base UPerNet training, DARN, STURM-Flood, physics loss, or raw-data modification will be started.
+2026-06-20 12:46:57,804 INFO Running tiny UPerNet smoke forward.
+2026-06-20 12:46:58,943 ERROR STEP 5J blocked: Expected more than 1 value per channel when training, got input size torch.Size([1, 256, 1, 1])
+Traceback (most recent call last):
+  File "E:\flood_research\experiments\terramind_baseline\scripts\step5j_upernet_adaptation.py", line 717, in main
+    tiny_smoke = run_smoke_forward(
+                 ^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\experiments\terramind_baseline\scripts\step5j_upernet_adaptation.py", line 250, in run_smoke_forward
+    logits = step5e.model_logits(task, images)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\experiments\terramind_baseline\scripts\step5e_tiny_unetdecoder_train.py", line 259, in model_logits
+    output = task.model(images)
+             ^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\models\pixel_wise_model.py", line 132, in forward
+    decoder_output = self.decoder([f.clone() for f in features])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\models\decoders\upernet_decoder.py", line 124, in forward
+    laterals.append(self.psp_forward(inputs))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\models\decoders\upernet_decoder.py", line 99, in psp_forward
+    psp_outs.extend(self.psp_modules(x))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\models\decoders\upernet_decoder.py", line 179, in forward
+    ppm_out = ppm(x)
+              ^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\container.py", line 253, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\models\decoders\utils.py", line 48, in forward
+    return self.act(self.norm(self.conv(x)))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\batchnorm.py", line 194, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 256, 1, 1])
+2026-06-20 12:49:44,854 INFO Starting STEP 5J controlled UPerNet adaptation.
+2026-06-20 12:49:44,867 INFO No TerraMind-L, base UPerNet training, DARN, STURM-Flood, physics loss, or raw-data modification will be started.
+2026-06-20 12:49:56,258 INFO Running tiny UPerNet smoke forward.
+2026-06-20 12:49:57,386 INFO tiny smoke forward OK: output_shape=[1, 2, 512, 512] loss=22.076750
+2026-06-20 12:52:09,250 INFO Starting STEP 5J controlled UPerNet adaptation.
+2026-06-20 12:52:09,254 INFO No TerraMind-L, base UPerNet training, DARN, STURM-Flood, physics loss, or raw-data modification will be started.
+2026-06-20 12:52:20,809 INFO Running tiny UPerNet smoke forward.
+2026-06-20 12:52:21,808 INFO tiny smoke forward OK: output_shape=[1, 2, 512, 512] loss=22.076750
+2026-06-20 12:53:17,292 INFO epoch=1 train_loss=7.236227 val_loss=0.145986 val_miou=0.769763 val_iou_water=0.601453 precision=32 bn_eval=13
+2026-06-20 12:54:13,304 INFO epoch=2 train_loss=0.135926 val_loss=0.636018 val_miou=0.439571 val_iou_water=0.234430 precision=32 bn_eval=13
+2026-06-20 12:55:08,783 INFO epoch=3 train_loss=0.193165 val_loss=0.131906 val_miou=0.772953 val_iou_water=0.596386 precision=32 bn_eval=13
+2026-06-20 12:56:04,312 INFO epoch=4 train_loss=0.152825 val_loss=0.139020 val_miou=0.779985 val_iou_water=0.609268 precision=32 bn_eval=13
+2026-06-20 12:57:00,140 INFO epoch=5 train_loss=0.139521 val_loss=0.281346 val_miou=0.806423 val_iou_water=0.658938 precision=32 bn_eval=13
+2026-06-20 12:57:17,039 INFO Saved 86 valid predictions to E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\predictions\valid
+2026-06-20 12:57:17,041 INFO Running evaluator: E:\flood_research\venvs\terramind-gpu\Scripts\python.exe C:\Users\Karim\Desktop\flood-segmentation-training\physics-informed-flood-segmentation\scripts\05_evaluate_predictions.py --prediction-dir E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\predictions\valid --manifest-csv E:\flood_research\experiments\terramind_baseline\runs\step5e_tiny_unetdecoder_baseline\manifests\sen1floods11_handlabeled_index_e_paths.csv --output-csv E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\metrics\tiny_upernet_valid_per_tile_metrics.csv --output-grouped-csv E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\metrics\tiny_upernet_valid_grouped_metrics.csv --output-summary-json E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\metrics\tiny_upernet_valid_summary.json --split valid
+2026-06-20 12:57:34,846 INFO Saved 89 test predictions to E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\predictions\test
+2026-06-20 12:57:34,848 INFO Running evaluator: E:\flood_research\venvs\terramind-gpu\Scripts\python.exe C:\Users\Karim\Desktop\flood-segmentation-training\physics-informed-flood-segmentation\scripts\05_evaluate_predictions.py --prediction-dir E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\predictions\test --manifest-csv E:\flood_research\experiments\terramind_baseline\runs\step5e_tiny_unetdecoder_baseline\manifests\sen1floods11_handlabeled_index_e_paths.csv --output-csv E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\metrics\tiny_upernet_test_per_tile_metrics.csv --output-grouped-csv E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\metrics\tiny_upernet_test_grouped_metrics.csv --output-summary-json E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\metrics\tiny_upernet_test_summary.json --split test
+2026-06-20 12:57:42,006 INFO Saved 15 bolivia predictions to E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\predictions\bolivia
+2026-06-20 12:57:42,010 INFO Running evaluator: E:\flood_research\venvs\terramind-gpu\Scripts\python.exe C:\Users\Karim\Desktop\flood-segmentation-training\physics-informed-flood-segmentation\scripts\05_evaluate_predictions.py --prediction-dir E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\predictions\bolivia --manifest-csv E:\flood_research\experiments\terramind_baseline\runs\step5e_tiny_unetdecoder_baseline\manifests\sen1floods11_handlabeled_index_e_paths.csv --output-csv E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\metrics\tiny_upernet_bolivia_per_tile_metrics.csv --output-grouped-csv E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\metrics\tiny_upernet_bolivia_grouped_metrics.csv --output-summary-json E:\flood_research\experiments\terramind_baseline\runs\step5j_upernet_adaptation\metrics\tiny_upernet_bolivia_summary.json --split bolivia
+2026-06-20 12:57:42,683 INFO Running base UPerNet smoke forward.
+2026-06-20 12:57:44,866 INFO base smoke forward OK: output_shape=[1, 2, 512, 512] loss=7.278527
+2026-06-20 12:57:44,875 INFO STEP 5J complete. Human validation required before starting STEP 5K — base UPerNet training or full-model memory test.

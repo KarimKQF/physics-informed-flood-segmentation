@@ -1,0 +1,8 @@
+W0620 12:49:51.899000 5420 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\datamodules\generic_multimodal_data_module.py:516: UserWarning: rgb_modality is deprecated and will be removed in a future release. Provide the modalities for plotting as keys in `rgb_indices` with the format {'<modality>': [<band indices>]}.
+  warnings.warn(
+Missing keys in ckpt_path E:/flood_research/experiments/terramind_baseline/checkpoints/pretrained/TerraMind_v1_tiny.pt: []
+INFO:step5j_upernet_adaptation:tiny smoke forward OK: output_shape=[1, 2, 512, 512] loss=22.076750
+E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\datamodules\generic_multimodal_data_module.py:516: UserWarning: rgb_modality is deprecated and will be removed in a future release. Provide the modalities for plotting as keys in `rgb_indices` with the format {'<modality>': [<band indices>]}.
+  warnings.warn(
+WARNING:terramind:Missing keys in ckpt_path E:/flood_research/experiments/terramind_baseline/checkpoints/pretrained/TerraMind_v1_tiny.pt: []

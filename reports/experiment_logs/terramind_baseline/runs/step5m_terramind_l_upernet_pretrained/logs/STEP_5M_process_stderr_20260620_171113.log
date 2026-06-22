@@ -1,0 +1,217 @@
+W0620 17:11:26.159000 14476 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\datamodules\generic_multimodal_data_module.py:516: UserWarning: rgb_modality is deprecated and will be removed in a future release. Provide the modalities for plotting as keys in `rgb_indices` with the format {'<modality>': [<band indices>]}.
+  warnings.warn(
+Missing keys in ckpt_path E:/flood_research/experiments/terramind_baseline/checkpoints/pretrained/TerraMind_v1_large.pt: []
+INFO:step5j_upernet_adaptation:STEP 5M pre-training smoke OK: loss=474.593903 peak_alloc=5322.84 MB
+E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\datamodules\generic_multimodal_data_module.py:516: UserWarning: rgb_modality is deprecated and will be removed in a future release. Provide the modalities for plotting as keys in `rgb_indices` with the format {'<modality>': [<band indices>]}.
+  warnings.warn(
+WARNING:terramind:Missing keys in ckpt_path E:/flood_research/experiments/terramind_baseline/checkpoints/pretrained/TerraMind_v1_large.pt: []
+INFO:step5j_upernet_adaptation:epoch=1 train_loss=14.885288 val_loss=0.655012 val_miou=0.509590 val_iou_water=0.287717 precision=32 bn_eval=13
+INFO:step5j_upernet_adaptation:epoch=2 train_loss=0.202064 val_loss=0.277612 val_miou=0.461487 val_iou_water=0.030364 precision=32 bn_eval=13
+INFO:step5j_upernet_adaptation:epoch=3 train_loss=0.148934 val_loss=0.133540 val_miou=0.787761 val_iou_water=0.623909 precision=32 bn_eval=13
+INFO:step5j_upernet_adaptation:epoch=4 train_loss=0.182177 val_loss=0.165109 val_miou=0.803859 val_iou_water=0.653858 precision=32 bn_eval=13
+INFO:step5j_upernet_adaptation:epoch=5 train_loss=0.175185 val_loss=0.125311 val_miou=0.807700 val_iou_water=0.660359 precision=32 bn_eval=13
+WARNING:terramind:Missing keys in ckpt_path E:/flood_research/experiments/terramind_baseline/checkpoints/pretrained/TerraMind_v1_large.pt: []
+E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\datamodules\generic_multimodal_data_module.py:516: UserWarning: rgb_modality is deprecated and will be removed in a future release. Provide the modalities for plotting as keys in `rgb_indices` with the format {'<modality>': [<band indices>]}.
+  warnings.warn(
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_895194_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_868803_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_142312_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_132163_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_495107_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_124834_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_1033830_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_308249_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_1050276_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_764946_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_118868_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_533192_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_180633_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_244057_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_691027_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_769408_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_1018317_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_869358_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_164336_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_70352_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_833266_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_1068117_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_1149855_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_977338_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_474783_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_293769_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_1413877_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_98310_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Nigeria_31096_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Nigeria_984831_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Nigeria_1095404_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Nigeria_820924_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_43105_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_94095_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_210595_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_1027214_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_336228_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_9684_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_305760_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_648632_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_172476_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_581976_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_284928_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_1019808_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_76868_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_252217_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_205585_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_7894_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_896458_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_657443_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_934240_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_153941_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Somalia_12849_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Somalia_256539_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Somalia_61368_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Somalia_649376_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Somalia_167787_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_1199913_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_8372658_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_7604243_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_6537196_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_4282030_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_8565131_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_85652_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_63307_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_612594_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_132922_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_236030_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_31559_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_236628_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_101973_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_321316_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_826217_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_741073_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_275372_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_19225_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_366607_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_308150_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_1039203_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_251323_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_1082482_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_225017_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_986268_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_646878_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_761032_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_741178_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+INFO:step5j_upernet_adaptation:Saved 86 valid predictions to E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\predictions\valid
+INFO:step5j_upernet_adaptation:Running evaluator: E:\flood_research\venvs\terramind-gpu\Scripts\python.exe C:\Users\Karim\Desktop\flood-segmentation-training\physics-informed-flood-segmentation\scripts\05_evaluate_predictions.py --prediction-dir E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\predictions\valid --manifest-csv E:\flood_research\experiments\terramind_baseline\runs\step5e_tiny_unetdecoder_baseline\manifests\sen1floods11_handlabeled_index_e_paths.csv --output-csv E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\metrics\valid_per_tile_metrics.csv --output-grouped-csv E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\metrics\valid_grouped_metrics.csv --output-summary-json E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\metrics\valid_summary.json --split valid
+E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\datamodules\generic_multimodal_data_module.py:516: UserWarning: rgb_modality is deprecated and will be removed in a future release. Provide the modalities for plotting as keys in `rgb_indices` with the format {'<modality>': [<band indices>]}.
+  warnings.warn(
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_313799_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_1078550_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_97059_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_359826_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_319168_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_866994_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_406026_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_53713_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_167233_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Ghana_141271_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_900498_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_591317_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_747992_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_79637_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_952728_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_828067_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_570384_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_44475_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_80221_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_1018327_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_592446_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_772630_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_631692_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in India_399883_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_333434_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_45934_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_1443339_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_382276_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_254910_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Mekong_424793_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Nigeria_417184_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Nigeria_225131_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Nigeria_812045_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Nigeria_22088_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_849790_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_664885_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_694942_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_70625_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_528249_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Pakistan_167553_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_913449_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_280900_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_790830_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_232281_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_271769_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_40936_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_1029191_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_59731_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_683296_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_34417_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_868895_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_511199_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_80102_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Paraguay_651904_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Somalia_699062_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Somalia_60129_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Somalia_685158_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Somalia_166342_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Somalia_94102_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Somalia_322855_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_6860600_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_7558720_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_5650136_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_7370579_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_6095801_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Spain_7387658_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_117737_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_1049830_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_534068_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_922192_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_377277_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_649970_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_450918_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_849649_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Sri-Lanka_713926_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_905409_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_430764_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_350244_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_527077_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_933610_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_66511_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_519181_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_778194_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_67102_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_1049586_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_595451_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_670826_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_504150_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in USA_758178_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+INFO:step5j_upernet_adaptation:Saved 89 test predictions to E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\predictions\test
+INFO:step5j_upernet_adaptation:Running evaluator: E:\flood_research\venvs\terramind-gpu\Scripts\python.exe C:\Users\Karim\Desktop\flood-segmentation-training\physics-informed-flood-segmentation\scripts\05_evaluate_predictions.py --prediction-dir E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\predictions\test --manifest-csv E:\flood_research\experiments\terramind_baseline\runs\step5e_tiny_unetdecoder_baseline\manifests\sen1floods11_handlabeled_index_e_paths.csv --output-csv E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\metrics\test_per_tile_metrics.csv --output-grouped-csv E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\metrics\test_grouped_metrics.csv --output-summary-json E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\metrics\test_summary.json --split test
+E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\datamodules\generic_multimodal_data_module.py:516: UserWarning: rgb_modality is deprecated and will be removed in a future release. Provide the modalities for plotting as keys in `rgb_indices` with the format {'<modality>': [<band indices>]}.
+  warnings.warn(
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_103757_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_129334_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_195474_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_23014_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_233925_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_242570_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_290290_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_294583_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_312675_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_314919_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_360519_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_379434_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_432776_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_60373_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+WARNING:rasterio._env:CPLE_IllegalArg in Bolivia_76104_prediction.tif: BLOCKXSIZE can only be used with TILED=YES
+INFO:step5j_upernet_adaptation:Saved 15 bolivia predictions to E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\predictions\bolivia
+INFO:step5j_upernet_adaptation:Running evaluator: E:\flood_research\venvs\terramind-gpu\Scripts\python.exe C:\Users\Karim\Desktop\flood-segmentation-training\physics-informed-flood-segmentation\scripts\05_evaluate_predictions.py --prediction-dir E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\predictions\bolivia --manifest-csv E:\flood_research\experiments\terramind_baseline\runs\step5e_tiny_unetdecoder_baseline\manifests\sen1floods11_handlabeled_index_e_paths.csv --output-csv E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\metrics\bolivia_per_tile_metrics.csv --output-grouped-csv E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\metrics\bolivia_grouped_metrics.csv --output-summary-json E:\flood_research\experiments\terramind_baseline\runs\step5m_terramind_l_upernet_pretrained\metrics\bolivia_summary.json --split bolivia
+INFO:step5j_upernet_adaptation:STEP 5M complete. Human validation required before starting STEP 5N — decide whether to freeze the SOTA baseline and prepare physics-informed loss, or run longer classical training.

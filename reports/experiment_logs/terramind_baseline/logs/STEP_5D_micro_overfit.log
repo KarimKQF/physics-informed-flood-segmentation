@@ -1,0 +1,70 @@
+2026-06-19 18:34:31,340 INFO Starting STEP 5D TerraMind tiny micro-overfit smoke test.
+2026-06-19 18:34:31,340 INFO Full training, UPerNet, DARN, STURM-Flood, and physics loss are disabled.
+2026-06-19 18:34:32,684 INFO Selected micro-overfit samples: ['USA_1068362', 'India_773682', 'India_391908', 'Sri-Lanka_523539']
+2026-06-19 18:35:45,526 INFO Starting STEP 5D TerraMind tiny micro-overfit smoke test.
+2026-06-19 18:35:45,526 INFO Full training, UPerNet, DARN, STURM-Flood, and physics loss are disabled.
+2026-06-19 18:35:46,794 INFO Selected micro-overfit samples: ['USA_1068362', 'India_773682', 'India_391908', 'Sri-Lanka_523539']
+2026-06-19 18:35:59,572 INFO Before metrics: {'accuracy': 0.835184029283878, 'precision': 0.10460966816275477, 'recall': 0.050417113626893856, 'f1_score': 0.06804137279182594, 'iou_per_class': [0.834186407647122, 0.03521885605291189], 'iou_background': 0.834186407647122, 'iou_water': 0.03521885605291189, 'mean_iou': 0.43470263185001695, 'support_per_class': [832431, 112799], 'support_background': 832431, 'support_water': 112799, 'valid_pixel_count': 945230, 'confusion_matrix': [[783754, 48677], [107112, 5687]], 'sample_metrics': [{'sample_id': 'USA_1068362', 'phase': 'before', 'accuracy': 0.8172010193648808, 'precision': 0.07105505998154414, 'recall': 0.0444487204156244, 'f1_score': 0.0546875, 'iou_per_class': [0.8162293183195392, 0.028112449799196786], 'iou_background': 0.8162293183195392, 'iou_water': 0.028112449799196786, 'mean_iou': 0.422170884059368, 'support_per_class': [230942, 31182], 'support_background': 230942, 'support_water': 31182, 'valid_pixel_count': 262124, 'confusion_matrix': [[212822, 18120], [29796, 1386]]}, {'sample_id': 'India_773682', 'phase': 'before', 'accuracy': 0.8341211979762098, 'precision': 0.08898876404494382, 'recall': 0.03837333247197907, 'f1_score': 0.053623417364418065, 'iou_per_class': [0.8333379702311162, 0.027550381484659447], 'iou_background': 0.8333379702311162, 'iou_water': 0.027550381484659447, 'mean_iou': 0.43044417585788786, 'support_per_class': [221834, 30959], 'support_background': 221834, 'support_water': 30959, 'valid_pixel_count': 252793, 'confusion_matrix': [[209672, 12162], [29771, 1188]]}, {'sample_id': 'India_391908', 'phase': 'before', 'accuracy': 0.8407228369651422, 'precision': 0.15257731958762888, 'recall': 0.06548924544999808, 'f1_score': 0.09164333405125996, 'iou_per_class': [0.8394327321182126, 0.048022120647818974], 'iou_background': 0.8394327321182126, 'iou_water': 0.048022120647818974, 'mean_iou': 0.44372742638301577, 'support_per_class': [185843, 25989], 'support_background': 185843, 'support_water': 25989, 'valid_pixel_count': 211832, 'confusion_matrix': [[176390, 9453], [24287, 1702]]}, {'sample_id': 'Sri-Lanka_523539', 'phase': 'before', 'accuracy': 0.8526187631876456, 'precision': 0.13628899835796388, 'recall': 0.05719729214804005, 'f1_score': 0.08057792244874651, 'iou_per_class': [0.8516607545952919, 0.04198030406712088], 'iou_background': 0.8516607545952919, 'iou_water': 0.04198030406712088, 'mean_iou': 0.44682052933120636, 'support_per_class': [193812, 24669], 'support_background': 193812, 'support_water': 24669, 'valid_pixel_count': 218481, 'confusion_matrix': [[184870, 8942], [23258, 1411]]}]}
+2026-06-19 18:36:15,407 INFO step=1 loss=0.639136 valid_pixels=211832 allocated_mb=90.87 reserved_mb=134.00 precision=16-mixed
+2026-06-19 18:36:15,690 INFO step=2 loss=0.570948 valid_pixels=218481 allocated_mb=89.92 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:15,834 INFO step=3 loss=0.596353 valid_pixels=262124 allocated_mb=91.31 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:15,985 INFO step=4 loss=0.561225 valid_pixels=252793 allocated_mb=90.82 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:16,140 INFO step=5 loss=0.488625 valid_pixels=218481 allocated_mb=90.79 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:16,296 INFO step=6 loss=0.516552 valid_pixels=262124 allocated_mb=89.99 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:16,441 INFO step=7 loss=0.514382 valid_pixels=252793 allocated_mb=91.13 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:16,582 INFO step=8 loss=0.532358 valid_pixels=211832 allocated_mb=90.12 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:16,716 INFO step=9 loss=0.473162 valid_pixels=262124 allocated_mb=90.79 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:16,855 INFO step=10 loss=0.484422 valid_pixels=252793 allocated_mb=91.85 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:17,010 INFO step=11 loss=0.418368 valid_pixels=218481 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:17,150 INFO step=12 loss=0.488300 valid_pixels=211832 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:17,291 INFO step=13 loss=0.403692 valid_pixels=218481 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:17,426 INFO step=14 loss=0.433459 valid_pixels=262124 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:17,564 INFO step=15 loss=0.457799 valid_pixels=252793 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:17,703 INFO step=16 loss=0.457018 valid_pixels=211832 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:17,844 INFO step=17 loss=0.447422 valid_pixels=252793 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:17,976 INFO step=18 loss=0.445202 valid_pixels=211832 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:18,115 INFO step=19 loss=0.395559 valid_pixels=262124 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:18,260 INFO step=20 loss=0.371288 valid_pixels=218481 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:18,412 INFO step=21 loss=0.430943 valid_pixels=211832 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:18,568 INFO step=22 loss=0.359485 valid_pixels=218481 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:18,733 INFO step=23 loss=0.373352 valid_pixels=262124 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:18,895 INFO step=24 loss=0.418319 valid_pixels=252793 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:19,069 INFO step=25 loss=0.414240 valid_pixels=252793 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:19,223 INFO step=26 loss=0.342202 valid_pixels=218481 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:19,370 INFO step=27 loss=0.358454 valid_pixels=262124 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:19,514 INFO step=28 loss=0.412786 valid_pixels=211832 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:19,659 INFO step=29 loss=0.406248 valid_pixels=211832 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:19,801 INFO step=30 loss=0.344666 valid_pixels=262124 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:19,945 INFO step=31 loss=0.402691 valid_pixels=252793 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:20,094 INFO step=32 loss=0.330048 valid_pixels=218481 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:20,235 INFO step=33 loss=0.391541 valid_pixels=252793 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:20,375 INFO step=34 loss=0.318566 valid_pixels=218481 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:20,545 INFO step=35 loss=0.391207 valid_pixels=211832 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:20,690 INFO step=36 loss=0.329345 valid_pixels=262124 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:20,826 INFO step=37 loss=0.377682 valid_pixels=252793 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:20,965 INFO step=38 loss=0.309351 valid_pixels=218481 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:21,113 INFO step=39 loss=0.380259 valid_pixels=211832 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:21,248 INFO step=40 loss=0.314904 valid_pixels=262124 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:21,393 INFO step=41 loss=0.311679 valid_pixels=262124 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:21,533 INFO step=42 loss=0.368974 valid_pixels=252793 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:21,687 INFO step=43 loss=0.365812 valid_pixels=211832 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:21,854 INFO step=44 loss=0.293942 valid_pixels=218481 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:22,013 INFO step=45 loss=0.361095 valid_pixels=211832 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:22,179 INFO step=46 loss=0.302950 valid_pixels=262124 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:22,353 INFO step=47 loss=0.356002 valid_pixels=252793 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:22,527 INFO step=48 loss=0.285338 valid_pixels=218481 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:22,701 INFO step=49 loss=0.282955 valid_pixels=218481 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:22,874 INFO step=50 loss=0.351548 valid_pixels=252793 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:23,032 INFO step=51 loss=0.352634 valid_pixels=211832 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:23,185 INFO step=52 loss=0.289549 valid_pixels=262124 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:23,333 INFO step=53 loss=0.287896 valid_pixels=262124 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:23,490 INFO step=54 loss=0.342925 valid_pixels=211832 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:23,641 INFO step=55 loss=0.272280 valid_pixels=218481 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:23,793 INFO step=56 loss=0.339703 valid_pixels=252793 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:23,950 INFO step=57 loss=0.337826 valid_pixels=252793 allocated_mb=89.87 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:24,093 INFO step=58 loss=0.266332 valid_pixels=218481 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:24,266 INFO step=59 loss=0.337707 valid_pixels=211832 allocated_mb=90.62 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:24,404 INFO step=60 loss=0.281546 valid_pixels=262124 allocated_mb=90.24 reserved_mb=160.00 precision=16-mixed
+2026-06-19 18:36:25,030 INFO After metrics: {'accuracy': 0.9265861218962581, 'precision': 0.8074863279589697, 'recall': 0.5052704367946524, 'f1_score': 0.6215911135831956, 'iou_per_class': [0.9218754925492775, 0.4509482779083292], 'iou_background': 0.9218754925492775, 'iou_water': 0.4509482779083292, 'mean_iou': 0.6864118852288034, 'support_per_class': [832431, 112799], 'support_background': 832431, 'support_water': 112799, 'valid_pixel_count': 945230, 'confusion_matrix': [[818843, 13588], [55805, 56994]], 'sample_metrics': [{'sample_id': 'USA_1068362', 'phase': 'after', 'accuracy': 0.9490164960095222, 'precision': 0.9022848369908787, 'recall': 0.6408184208838432, 'f1_score': 0.7493999399939995, 'iou_per_class': [0.9448092441625162, 0.5992322917291429], 'iou_background': 0.9448092441625162, 'iou_water': 0.5992322917291429, 'mean_iou': 0.7720207679458295, 'support_per_class': [230942, 31182], 'support_background': 230942, 'support_water': 31182, 'valid_pixel_count': 262124, 'confusion_matrix': [[228778, 2164], [11200, 19982]]}, {'sample_id': 'India_773682', 'phase': 'after', 'accuracy': 0.9056579889474787, 'precision': 0.7281185831622177, 'recall': 0.3665170063632546, 'f1_score': 0.4875921191156565, 'iou_per_class': [0.9012242903175037, 0.32239459029435164], 'iou_background': 0.9012242903175037, 'iou_water': 0.32239459029435164, 'mean_iou': 0.6118094403059277, 'support_per_class': [221834, 30959], 'support_background': 221834, 'support_water': 30959, 'valid_pixel_count': 252793, 'confusion_matrix': [[217597, 4237], [19612, 11347]]}, {'sample_id': 'India_391908', 'phase': 'after', 'accuracy': 0.906109558518071, 'precision': 0.778895391367959, 'recall': 0.3277540497902959, 'f1_score': 0.4613676371022343, 'iou_per_class': [0.902175944598011, 0.29985566937726615], 'iou_background': 0.902175944598011, 'iou_water': 0.29985566937726615, 'mean_iou': 0.6010158069876386, 'support_per_class': [185843, 25989], 'support_background': 185843, 'support_water': 25989, 'valid_pixel_count': 211832, 'confusion_matrix': [[183425, 2418], [17471, 8518]]}, {'sample_id': 'Sri-Lanka_523539', 'phase': 'after', 'accuracy': 0.9437433918738929, 'precision': 0.7823964227048732, 'recall': 0.695082897563744, 'f1_score': 0.7361597080605345, 'iou_per_class': [0.9389521889000367, 0.5824784292411169], 'iou_background': 0.9389521889000367, 'iou_water': 0.5824784292411169, 'mean_iou': 0.7607153090705768, 'support_per_class': [193812, 24669], 'support_background': 193812, 'support_water': 24669, 'valid_pixel_count': 218481, 'confusion_matrix': [[189043, 4769], [7522, 17147]]}]}
+2026-06-19 18:36:27,773 INFO Summary written to E:\flood_research\experiments\terramind_baseline\metrics\micro_overfit_summary.json
+2026-06-19 18:36:27,773 INFO STEP 5D complete. Human validation required before STEP 5E.

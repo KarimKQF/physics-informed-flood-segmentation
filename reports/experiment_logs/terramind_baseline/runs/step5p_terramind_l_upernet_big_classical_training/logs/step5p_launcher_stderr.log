@@ -1,0 +1,8 @@
+No training runner found.
+Au caractäre C:\Users\Karim\Desktop\flood-segmentation-training\physics-informed-flood-segmentation\run_step5p_big_sota
+_train.ps1:159 : 5
++     throw "No training runner found."
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (No training runner found.:String) [], RuntimeException
+    + FullyQualifiedErrorId : No training runner found.
+ 

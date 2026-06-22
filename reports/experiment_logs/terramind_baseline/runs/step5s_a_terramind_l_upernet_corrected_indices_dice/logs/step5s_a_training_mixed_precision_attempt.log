@@ -1,0 +1,6 @@
+2026-06-21 17:14:55,334 INFO Starting STEP 5S-A corrected TerraMind-L UPerNet Dice training.
+2026-06-21 17:14:55,334 INFO Guardrails: no physics loss, no topographic loss, no DEM input, no DARN, no STURM.
+2026-06-21 17:15:07,487 INFO Train dataset: 251
+2026-06-21 17:15:07,499 INFO Val dataset: 86
+2026-06-21 17:15:12,242 WARNING Missing keys in ckpt_path E:/flood_research/experiments/terramind_baseline/checkpoints/pretrained/TerraMind_v1_large.pt: []
+2026-06-21 17:17:22,374 INFO epoch=1 train_loss=nan val_loss=nan val_miou=0.241923 val_iou_water=0.074979 val_f1_water=0.139499 lr=0.00002000 next_lr=0.00002000 no_improve=0 precision=16-mixed bn_eval=13

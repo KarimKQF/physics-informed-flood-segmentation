@@ -1,0 +1,12 @@
+=== STEP 5P launcher ===
+Repo: C:/Users/Karim/Desktop/flood-segmentation-training/physics-informed-flood-segmentation
+Python: E:/flood_research/venvs/terramind-gpu/Scripts/python.exe
+Base config: E:/flood_research/experiments/terramind_baseline/runs/step5o_terramind_l_upernet_long_classical_training/configs/terramind_l_upernet_long_classical_train.yaml
+New run: E:/flood_research/experiments/terramind_baseline/runs/step5p_terramind_l_upernet_big_classical_training
+Patched config written to: E:\flood_research\experiments\terramind_baseline\runs\step5p_terramind_l_upernet_big_classical_training\configs\terramind_l_upernet_big_classical_train.yaml
+Searching for existing STEP 5O training runner...
+Could not automatically find the STEP 5O training runner.
+The config has been created here:
+E:/flood_research/experiments/terramind_baseline/runs/step5p_terramind_l_upernet_big_classical_training/configs/terramind_l_upernet_big_classical_train.yaml
+
+Search manually in the repo for the script used in STEP 5O, then run it with this config.

@@ -1,0 +1,63 @@
+STEP 6B2b mode: download
+Run dir: E:/flood_research/experiments/terramind_baseline/runs/step6b2b_copernicus_dem_aws_download
+Output root: E:/flood_research/data/raw/dem/copernicus_glo30
+Log: E:/flood_research/experiments/terramind_baseline/runs/step6b2b_copernicus_dem_aws_download/logs/step6b2b_copernicus_dem_download.log
+N04E045 downloaded 39460874 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N04_00_E045_00_DEM.tif
+N03E045 downloaded 40715120 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N03_00_E045_00_DEM.tif
+N05E080 downloaded 1213814 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N05_00_E080_00_DEM.tif
+N04E044 downloaded 37631724 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N04_00_E044_00_DEM.tif
+N05E044 downloaded 39806165 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N05_00_E044_00_DEM.tif
+N06E080 downloaded 47653237 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N06_00_E080_00_DEM.tif
+N02E045 downloaded 36713401 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N02_00_E045_00_DEM.tif
+N08E005 downloaded 44491153 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N08_00_E005_00_DEM.tif
+N07E081 downloaded 36719490 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N07_00_E081_00_DEM.tif
+N06E081 downloaded 27972443 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N06_00_E081_00_DEM.tif
+N08E081 downloaded 13938291 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N08_00_E081_00_DEM.tif
+N09E005 downloaded 44115145 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N09_00_E005_00_DEM.tif
+N08W001 downloaded 39135937 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N08_00_W001_00_DEM.tif
+N09W001 downloaded 42194767 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N09_00_W001_00_DEM.tif
+N09W002 downloaded 43441257 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N09_00_W002_00_DEM.tif
+N10W001 downloaded 42354060 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N10_00_W001_00_DEM.tif
+N08W002 downloaded 44128819 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N08_00_W002_00_DEM.tif
+N10W002 downloaded 42377785 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N10_00_W002_00_DEM.tif
+N08E006 downloaded 46396328 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N08_00_E006_00_DEM.tif
+N13E105 downloaded 48614529 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N13_00_E105_00_DEM.tif
+N12E105 downloaded 48196577 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N12_00_E105_00_DEM.tif
+N13E106 downloaded 47920034 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N13_00_E106_00_DEM.tif
+N25E092 downloaded 45729100 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N25_00_E092_00_DEM.tif
+N25E093 downloaded 46431354 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N25_00_E093_00_DEM.tif
+N26E093 downloaded 44359030 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N26_00_E093_00_DEM.tif
+N10E005 downloaded 42092089 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N10_00_E005_00_DEM.tif
+N26E092 downloaded 43741793 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N26_00_E092_00_DEM.tif
+N27E092 downloaded 42761602 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N27_00_E092_00_DEM.tif
+N29E070 downloaded 41420492 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N29_00_E070_00_DEM.tif
+N12E106 downloaded 48350254 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N12_00_E106_00_DEM.tif
+N32E071 downloaded 40926049 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N32_00_E071_00_DEM.tif
+N31E071 downloaded 41880738 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N31_00_E071_00_DEM.tif
+N33E071 downloaded 43385598 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N33_00_E071_00_DEM.tif
+N38W001 downloaded 32657975 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N38_00_W001_00_DEM.tif
+N30E070 downloaded 42223052 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N30_00_E070_00_DEM.tif
+N27E093 downloaded 44597377 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N27_00_E093_00_DEM.tif
+N38W096 downloaded 41063029 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N38_00_W096_00_DEM.tif
+N39W095 downloaded 43035747 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N39_00_W095_00_DEM.tif
+N38W095 downloaded 42462014 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N38_00_W095_00_DEM.tif
+N39W096 downloaded 42110100 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N39_00_W096_00_DEM.tif
+N40W095 downloaded 42289674 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N40_00_W095_00_DEM.tif
+S14W065 downloaded 39695990 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_S14_00_W065_00_DEM.tif
+N33E072 downloaded 42407422 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N33_00_E072_00_DEM.tif
+S14W066 downloaded 38224243 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_S14_00_W066_00_DEM.tif
+S15W066 downloaded 40626523 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_S15_00_W066_00_DEM.tif
+S16W066 downloaded 42678160 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_S16_00_W066_00_DEM.tif
+S13W065 downloaded 43531532 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_S13_00_W065_00_DEM.tif
+S24W058 downloaded 44696746 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_S24_00_W058_00_DEM.tif
+S24W057 downloaded 43511402 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_S24_00_W057_00_DEM.tif
+S26W058 downloaded 44737663 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_S26_00_W058_00_DEM.tif
+S25W058 downloaded 43558691 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_S25_00_W058_00_DEM.tif
+N40W096 downloaded 41656831 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_N40_00_W096_00_DEM.tif
+S25W057 downloaded 43971471 E:/flood_research/data/raw/dem/copernicus_glo30/Copernicus_DSM_COG_10_S25_00_W057_00_DEM.tif
+required_cells=53
+available_tiles=53
+missing_tiles=0
+download_started=True
+download_completed=True
+output_root=E:\flood_research\data\raw\dem\copernicus_glo30

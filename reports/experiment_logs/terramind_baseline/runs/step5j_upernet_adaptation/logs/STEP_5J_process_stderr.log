@@ -1,0 +1,77 @@
+W0620 12:46:53.299000 19612 Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\datamodules\generic_multimodal_data_module.py:516: UserWarning: rgb_modality is deprecated and will be removed in a future release. Provide the modalities for plotting as keys in `rgb_indices` with the format {'<modality>': [<band indices>]}.
+  warnings.warn(
+Missing keys in ckpt_path E:/flood_research/experiments/terramind_baseline/checkpoints/pretrained/TerraMind_v1_tiny.pt: []
+ERROR:step5j_upernet_adaptation:STEP 5J blocked: Expected more than 1 value per channel when training, got input size torch.Size([1, 256, 1, 1])
+Traceback (most recent call last):
+  File "E:\flood_research\experiments\terramind_baseline\scripts\step5j_upernet_adaptation.py", line 717, in main
+    tiny_smoke = run_smoke_forward(
+                 ^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\experiments\terramind_baseline\scripts\step5j_upernet_adaptation.py", line 250, in run_smoke_forward
+    logits = step5e.model_logits(task, images)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\experiments\terramind_baseline\scripts\step5e_tiny_unetdecoder_train.py", line 259, in model_logits
+    output = task.model(images)
+             ^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\models\pixel_wise_model.py", line 132, in forward
+    decoder_output = self.decoder([f.clone() for f in features])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\models\decoders\upernet_decoder.py", line 124, in forward
+    laterals.append(self.psp_forward(inputs))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\models\decoders\upernet_decoder.py", line 99, in psp_forward
+    psp_outs.extend(self.psp_modules(x))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\models\decoders\upernet_decoder.py", line 179, in forward
+    ppm_out = ppm(x)
+              ^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\container.py", line 253, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\terratorch\models\decoders\utils.py", line 48, in forward
+    return self.act(self.norm(self.conv(x)))
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\modules\batchnorm.py", line 194, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\functional.py", line 2841, in batch_norm
+    _verify_batch_size(input.size())
+  File "E:\flood_research\venvs\terramind-gpu\Lib\site-packages\torch\nn\functional.py", line 2806, in _verify_batch_size
+    raise ValueError(
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 256, 1, 1])

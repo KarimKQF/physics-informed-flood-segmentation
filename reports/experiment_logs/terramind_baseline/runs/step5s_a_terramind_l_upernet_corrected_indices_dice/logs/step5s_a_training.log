@@ -1,0 +1,18 @@
+2026-06-21 17:19:19,201 INFO Starting STEP 5S-A corrected TerraMind-L UPerNet Dice training.
+2026-06-21 17:19:19,202 INFO Guardrails: no physics loss, no topographic loss, no DEM input, no DARN, no STURM.
+2026-06-21 17:19:31,659 INFO Train dataset: 251
+2026-06-21 17:19:31,672 INFO Val dataset: 86
+2026-06-21 17:19:35,981 WARNING Missing keys in ckpt_path E:/flood_research/experiments/terramind_baseline/checkpoints/pretrained/TerraMind_v1_large.pt: []
+2026-06-21 17:23:10,547 INFO epoch=1 train_loss=0.420671 val_loss=0.331813 val_miou=0.768785 val_iou_water=0.592307 val_f1_water=0.743961 lr=0.00002000 next_lr=0.00002000 no_improve=0 precision=32 bn_eval=13
+2026-06-21 17:26:42,569 INFO epoch=2 train_loss=0.314773 val_loss=0.299732 val_miou=0.778660 val_iou_water=0.616455 val_f1_water=0.762724 lr=0.00002000 next_lr=0.00002000 no_improve=0 precision=32 bn_eval=13
+2026-06-21 17:30:10,837 INFO epoch=3 train_loss=0.295458 val_loss=0.304939 val_miou=0.786690 val_iou_water=0.623088 val_f1_water=0.767781 lr=0.00002000 next_lr=0.00002000 no_improve=0 precision=32 bn_eval=13
+2026-06-21 17:33:39,042 INFO epoch=4 train_loss=0.275230 val_loss=0.245520 val_miou=0.797274 val_iou_water=0.648849 val_f1_water=0.787033 lr=0.00002000 next_lr=0.00002000 no_improve=0 precision=32 bn_eval=13
+2026-06-21 17:36:37,972 INFO epoch=5 train_loss=0.277646 val_loss=0.250896 val_miou=0.790786 val_iou_water=0.643034 val_f1_water=0.782740 lr=0.00002000 next_lr=0.00002000 no_improve=1 precision=32 bn_eval=13
+2026-06-21 17:39:30,210 INFO epoch=6 train_loss=0.252492 val_loss=0.258362 val_miou=0.760967 val_iou_water=0.598358 val_f1_water=0.748716 lr=0.00002000 next_lr=0.00002000 no_improve=2 precision=32 bn_eval=13
+2026-06-21 17:43:00,900 INFO epoch=7 train_loss=0.239129 val_loss=0.230295 val_miou=0.833249 val_iou_water=0.706024 val_f1_water=0.827684 lr=0.00002000 next_lr=0.00002000 no_improve=0 precision=32 bn_eval=13
+2026-06-21 17:46:40,358 INFO epoch=8 train_loss=0.229593 val_loss=0.215457 val_miou=0.839716 val_iou_water=0.720274 val_f1_water=0.837394 lr=0.00002000 next_lr=0.00002000 no_improve=0 precision=32 bn_eval=13
+2026-06-21 17:50:02,253 INFO epoch=9 train_loss=0.222102 val_loss=0.217101 val_miou=0.815391 val_iou_water=0.683108 val_f1_water=0.811722 lr=0.00002000 next_lr=0.00002000 no_improve=1 precision=32 bn_eval=13
+2026-06-21 17:53:48,946 INFO epoch=10 train_loss=0.223256 val_loss=0.206764 val_miou=0.842990 val_iou_water=0.725704 val_f1_water=0.841053 lr=0.00002000 next_lr=0.00002000 no_improve=0 precision=32 bn_eval=13
+2026-06-21 17:57:30,750 INFO epoch=11 train_loss=0.206278 val_loss=0.215377 val_miou=0.837687 val_iou_water=0.712143 val_f1_water=0.831873 lr=0.00002000 next_lr=0.00002000 no_improve=1 precision=32 bn_eval=13
+2026-06-21 18:00:50,879 INFO epoch=12 train_loss=0.198557 val_loss=0.207635 val_miou=0.834023 val_iou_water=0.713775 val_f1_water=0.832985 lr=0.00002000 next_lr=0.00002000 no_improve=2 precision=32 bn_eval=13
+2026-06-21 18:04:09,917 INFO epoch=13 train_loss=0.198391 val_loss=0.202358 val_miou=0.836030 val_iou_water=0.716361 val_f1_water=0.834744 lr=0.00002000 next_lr=0.00002000 no_improve=3 precision=32 bn_eval=13

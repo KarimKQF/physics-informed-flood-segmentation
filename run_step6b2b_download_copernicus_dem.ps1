@@ -10,7 +10,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$REPO = "C:/Users/Karim/Desktop/flood-segmentation-training/physics-informed-flood-segmentation"
+$REPO = "C:/flood_research/repos/physics-informed-flood-segmentation"
 $PYTHON = "E:/flood_research/venvs/terramind-gpu/Scripts/python.exe"
 $RUN_DIR = "E:/flood_research/experiments/terramind_baseline/runs/step6b2b_copernicus_dem_aws_download"
 $REQUIRED_CELLS = "E:/flood_research/experiments/terramind_baseline/runs/step6b2_dem_source_acquisition/manifests/required_dem_cells.csv"

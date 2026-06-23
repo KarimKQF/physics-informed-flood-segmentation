@@ -2,27 +2,27 @@
 
 ## Summary
 - Status: `done`
-- Generated at: `2026-06-19T15:44:35`
+- Generated at: `2026-06-22T11:30:02`
 - Raw data modified: `false`
 - STEP 3 started: `false`
 - Next step allowed: `false`
-- Dataset root: `D:/flood_research/data/raw/sen1floods11`
+- Dataset root: `E:/flood_research/data/raw/sen1floods11`
 
 ## Downloaded dataset structure
 | Category | Files | Size GB |
 |---|---:|---:|
-| `WeaklyLabeled` | 17537 | 33.066 |
 | `catalog` | 9666 | 0.033 |
 | `HandLabeled` | 2230 | 1.753 |
 | `perm_water` | 1628 | 1.485 |
+| `WeaklyLabeled` | 1518 | 0.006 |
 | `splits` | 8 | 0.0 |
 | `checkpoints` | 4 | 0.527 |
 | `metadata` | 1 | 0.0 |
 
 ## Inventory totals
-- Total files: `31074`
-- Total size: `36.864 GB`
-- Extensions: `{'.json': 9665, '.zip': 1, '.cp': 4, '.tif': 21394, '': 1, '.geojson': 1, '.csv': 8}`
+- Total files: `15055`
+- Total size: `3.804 GB`
+- Extensions: `{'.json': 9665, '.zip': 1, '.cp': 4, '.tif': 5357, '.gstmp': 19, '.geojson': 1, '.csv': 8}`
 
 ## Hand-labeled index totals
 - Samples indexed: `446`
@@ -39,14 +39,14 @@
 - Hand-labeled samples not used by train/valid/test splits: `15`
 - Hand-labeled samples not used by any flood_handlabeled split: `0`
 - Split file names:
-  - `D:/flood_research/data/raw/sen1floods11/v1.1/splits/flood_handlabeled/flood_bolivia_data.csv`
-  - `D:/flood_research/data/raw/sen1floods11/v1.1/splits/flood_handlabeled/flood_test_data.csv`
-  - `D:/flood_research/data/raw/sen1floods11/v1.1/splits/flood_handlabeled/flood_train_data.csv`
-  - `D:/flood_research/data/raw/sen1floods11/v1.1/splits/flood_handlabeled/flood_valid_data.csv`
-  - `D:/flood_research/data/raw/sen1floods11/v1.1/splits/perm_water/permanent_water_data.csv`
-  - `D:/flood_research/data/raw/sen1floods11/v1.1/splits/perm_water/permanent_water_test_data.csv`
-  - `D:/flood_research/data/raw/sen1floods11/v1.1/splits/perm_water/permanent_water_train_data.csv`
-  - `D:/flood_research/data/raw/sen1floods11/v1.1/splits/perm_water/permanent_water_validation_data.csv`
+  - `E:/flood_research/data/raw/sen1floods11/v1.1/splits/flood_handlabeled/flood_bolivia_data.csv`
+  - `E:/flood_research/data/raw/sen1floods11/v1.1/splits/flood_handlabeled/flood_test_data.csv`
+  - `E:/flood_research/data/raw/sen1floods11/v1.1/splits/flood_handlabeled/flood_train_data.csv`
+  - `E:/flood_research/data/raw/sen1floods11/v1.1/splits/flood_handlabeled/flood_valid_data.csv`
+  - `E:/flood_research/data/raw/sen1floods11/v1.1/splits/perm_water/permanent_water_data.csv`
+  - `E:/flood_research/data/raw/sen1floods11/v1.1/splits/perm_water/permanent_water_test_data.csv`
+  - `E:/flood_research/data/raw/sen1floods11/v1.1/splits/perm_water/permanent_water_train_data.csv`
+  - `E:/flood_research/data/raw/sen1floods11/v1.1/splits/perm_water/permanent_water_validation_data.csv`
 
 ## Mask label distribution
 | Label | Count | Percent | Interpretation |
@@ -83,14 +83,14 @@
 - Confirm the policy for no-water samples before STEP 3/cleaning decisions.
 
 ## Generated files
-- Local inventory: `C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/sen1floods11_file_inventory.csv`
-- Local hand index: `C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/sen1floods11_handlabeled_index.csv`
-- Local hand audit: `C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/sen1floods11_handlabeled_audit.csv`
-- Local report: `C:/Users/ELEVES/Desktop/STAGE DE RECHERCHE/aiflow/reports/STEP_2_sen1floods11_audit_report.md`
-- External inventory: `D:/flood_research/reports/sen1floods11_file_inventory.csv`
-- External hand index: `D:/flood_research/reports/sen1floods11_handlabeled_index.csv`
-- External hand audit: `D:/flood_research/reports/sen1floods11_handlabeled_audit.csv`
-- External report: `D:/flood_research/reports/STEP_2_sen1floods11_audit_report.md`
+- Local inventory: `C:/flood_research/repos/physics-informed-flood-segmentation/reports/sen1floods11_file_inventory.csv`
+- Local hand index: `C:/flood_research/repos/physics-informed-flood-segmentation/reports/sen1floods11_handlabeled_index.csv`
+- Local hand audit: `C:/flood_research/repos/physics-informed-flood-segmentation/reports/sen1floods11_handlabeled_audit.csv`
+- Local report: `C:/flood_research/repos/physics-informed-flood-segmentation/reports/STEP_2_sen1floods11_audit_report.md`
+- External inventory: `E:/flood_research/reports/sen1floods11_file_inventory.csv`
+- External hand index: `E:/flood_research/reports/sen1floods11_handlabeled_index.csv`
+- External hand audit: `E:/flood_research/reports/sen1floods11_handlabeled_audit.csv`
+- External report: `E:/flood_research/reports/STEP_2_sen1floods11_audit_report.md`
 
 ## Problems detected
 - None

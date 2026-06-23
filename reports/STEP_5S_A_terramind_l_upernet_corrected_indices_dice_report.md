@@ -1,6 +1,6 @@
 # STEP 5S-A - TerraMind-L UPerNet Corrected Indices Dice Run
 
-Generated at: 2026-06-21T15:19:22+00:00
+Generated at: 2026-06-22T04:37:33+00:00
 
 ## Purpose
 
@@ -17,7 +17,7 @@ STEP 5R found that loss parity is mostly satisfied: the official IBM TerraMind S
 - Water class index: 1
 - Inputs: S2L1C + S1GRD only
 - No physics loss, no topographic loss, no DEM input, no DARN, no STURM-Flood
-- Config: `C:/Users/Karim/Desktop/flood-segmentation-training/physics-informed-flood-segmentation/configs/step5s_a_terramind_l_upernet_corrected_indices_dice.yaml`
+- Config: `C:/flood_research/repos/physics-informed-flood-segmentation/configs/step5s_a_terramind_l_upernet_corrected_indices_dice.yaml`
 - Run config: `E:/flood_research/experiments/terramind_baseline/runs/step5s_a_terramind_l_upernet_corrected_indices_dice/configs/step5s_a_terramind_l_upernet_corrected_indices_dice.yaml`
 
 ## Dataset Policy
@@ -52,17 +52,13 @@ STEP 5R found that loss parity is mostly satisfied: the official IBM TerraMind S
 - Loss finite: True
 - Backward OK: True
 - BatchNorm eval modules: 13
-- GPU peak allocated MB: 6213.089
+- GPU peak allocated MB: 6213.183
 
 ## Training Status
 
-- Status: running
+- Status: smoke_passed
 - Log: `E:/flood_research/experiments/terramind_baseline/runs/step5s_a_terramind_l_upernet_corrected_indices_dice/logs/step5s_a_training.log`
 
-- Training started: True
-- Training completed: False
-- Best epoch: unknown
-- Best validation mIoU: unknown
 
 ## Decision Notes
 

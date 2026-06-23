@@ -1,0 +1,206 @@
+step: 6C
+status: prepared_not_launched
+seed_everything: 42
+run_dir: E:/flood_research/experiments/terramind_baseline/runs/step6c_terramind_l_upernet_dice_topographic_lambda05
+guardrails:
+  physics_loss_training_started: false
+  dem_as_model_input: false
+  dem_in_loss_only: true
+  darn_started: false
+  sturm_training_started: false
+  raw_data_modified: false
+  official_split_files_modified: false
+  baseline_for_comparison: STEP_5S_A
+physics_loss:
+  enabled: true
+  type: TopographicInconsistencyLoss
+  combined_loss_class: CombinedDicePhysicsLoss
+  lambda_topo: 0.5
+  segmentation_loss: dice
+  total_loss_formula: "DiceLoss(logits, target) + 0.5 * TopographicInconsistencyLoss(logits, target, dem)"
+  elevation_margin: 0.0
+  elevation_scale: 1.0
+  use_elevation_weight: true
+  neighborhood: "4"
+  ignore_index: -1
+  water_class: 1
+dem:
+  use_as_model_input: false
+  use_in_loss: true
+  aligned_dem_root: E:/flood_research/data/derived/sen1floods11_topography/dem_aligned
+  dem_filename_pattern: "{split}_{tile_id}_copernicus_glo30_dem_aligned.tif"
+  dem_source: Copernicus GLO-30 DSM aligned to Sen1Floods11 LabelHand grid
+  verified_samples: 441
+  qc_status: topographic_alignment_validated
+trainer:
+  accelerator: gpu
+  devices: 1
+  precision: '32'
+  batch_size: 2
+  gradient_accumulation_steps: 4
+  effective_batch_size: 8
+  max_epochs: 80
+  early_stopping_monitor: validation_miou
+  early_stopping_mode: max
+  early_stopping_patience: 15
+  early_stopping_min_epochs: 30
+  batchnorm_eval_policy: BatchNorm modules kept in eval mode and affine parameters frozen (UPerNet PSP requirement)
+data:
+  class_path: terratorch.datamodules.GenericMultiModalDataModule
+  init_args:
+    task: segmentation
+    batch_size: 2
+    num_workers: 0
+    modalities:
+    - S2L1C
+    - S1GRD
+    rgb_modality: S2L1C
+    rgb_indices:
+    - 3
+    - 2
+    - 1
+    train_data_root:
+      S2L1C: E:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/S2Hand
+      S1GRD: E:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/S1Hand
+    train_label_data_root: E:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/LabelHand
+    val_data_root:
+      S2L1C: E:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/S2Hand
+      S1GRD: E:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/S1Hand
+    val_label_data_root: E:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/LabelHand
+    test_data_root:
+      S2L1C: E:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/S2Hand
+      S1GRD: E:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/S1Hand
+    test_label_data_root: E:/flood_research/data/raw/sen1floods11/v1.1/data/flood_events/HandLabeled/LabelHand
+    train_split: E:/flood_research/experiments/terramind_baseline/runs/step5e_tiny_unetdecoder_baseline/manifests/flood_train_step5e_filtered.txt
+    val_split: E:/flood_research/experiments/terramind_baseline/runs/step5e_tiny_unetdecoder_baseline/manifests/flood_valid_step5e_filtered.txt
+    test_split: E:/flood_research/experiments/terramind_baseline/runs/step5e_tiny_unetdecoder_baseline/manifests/flood_test_step5e_filtered.txt
+    image_grep:
+      S2L1C: '*_S2Hand.tif'
+      S1GRD: '*_S1Hand.tif'
+    label_grep: '*_LabelHand.tif'
+    no_label_replace: -1
+    no_data_replace: 0
+    num_classes: 2
+    means:
+      S2L1C:
+      - 2357.089
+      - 2137.385
+      - 2018.788
+      - 2082.986
+      - 2295.651
+      - 2854.537
+      - 3122.849
+      - 3040.56
+      - 3306.481
+      - 1473.847
+      - 506.07
+      - 2472.825
+      - 1838.929
+      S1GRD:
+      - -12.599
+      - -20.293
+    stds:
+      S2L1C:
+      - 1624.683
+      - 1675.806
+      - 1557.708
+      - 1833.702
+      - 1823.738
+      - 1733.977
+      - 1732.131
+      - 1679.732
+      - 1727.26
+      - 1024.687
+      - 442.165
+      - 1331.411
+      - 1160.419
+      S1GRD:
+      - 5.195
+      - 5.89
+    train_transform:
+    - class_path: albumentations.D4
+    - class_path: albumentations.pytorch.transforms.ToTensorV2
+    val_transform: null
+    test_transform: null
+    pin_memory: true
+model:
+  class_path: terratorch.tasks.SemanticSegmentationTask
+  init_args:
+    model_factory: EncoderDecoderFactory
+    model_args:
+      backbone: terramind_v1_large
+      backbone_pretrained: false
+      backbone_modalities:
+      - S2L1C
+      - S1GRD
+      backbone_merge_method: mean
+      necks:
+      - name: SelectIndices
+        indices:
+        - 5
+        - 11
+        - 17
+        - 23
+      - name: ReshapeTokensToImage
+        remove_cls_token: false
+      - name: LearnedInterpolateToPyramidal
+      decoder: UperNetDecoder
+      decoder_channels: 256
+      head_dropout: 0.1
+      num_classes: 2
+      backbone_ckpt_path: E:/flood_research/experiments/terramind_baseline/checkpoints/pretrained/TerraMind_v1_large.pt
+      decoder_pool_scales:
+      - 1
+      - 2
+      - 3
+      - 6
+      decoder_align_corners: true
+      decoder_scale_modules: false
+    loss: dice
+    ignore_index: -1
+    freeze_backbone: false
+    freeze_decoder: false
+    class_names:
+    - Others
+    - Flood
+optimizer:
+  class_path: torch.optim.AdamW
+  init_args:
+    lr: 2.0e-05
+    weight_decay: 0.0001
+lr_scheduler:
+  class_path: torch.optim.lr_scheduler.ReduceLROnPlateau
+  init_args:
+    mode: max
+    factor: 0.5
+    patience: 3
+  monitor: validation_miou
+dataset_policy:
+  dataset: Sen1Floods11
+  train: 251
+  valid: 86
+  test: 89
+  bolivia: 15
+  excluded_fully_invalid_tile_ids:
+  - Ghana_234935
+  - Ghana_26376
+  - Ghana_277
+  - Ghana_5079
+  - Ghana_83483
+  keep_no_water: true
+  keep_warning_review: true
+  ignore_index: -1
+  water_class_index: 1
+comparison_baseline:
+  step: 5S-A
+  valid_miou: 0.8812325126729853
+  test_miou: 0.8730507303031354
+  bolivia_miou: 0.8439550005662613
+  checkpoint: E:/flood_research/experiments/terramind_baseline/runs/step5s_a_terramind_l_upernet_corrected_indices_dice_bs2_accum4/checkpoints/best_checkpoint.pt
+lambda_sweep_plan:
+  initial: 0.5
+  planned_values:
+  - 0.01
+  - 0.05
+  - 0.1
+  note: Run calibrated lambda=0.5 first (STEP 6C). Full sweep in STEP 6D after human validation.

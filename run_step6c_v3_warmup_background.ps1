@@ -1,0 +1,87 @@
+$ErrorActionPreference = "Stop"
+
+$RepoRoot = "C:\flood_research\repos\physics-informed-flood-segmentation"
+$Python = "E:\flood_research\venvs\terramind-gpu\Scripts\python.exe"
+$ConfigPath = Join-Path $RepoRoot "configs\step6c_v3_terramind_l_upernet_dice_topographic_lambda05_warmup_5sa_dataloader.yaml"
+$TrainScript = Join-Path $RepoRoot "scripts\step6c_v3_train.py"
+$RunDir = "E:\flood_research\experiments\terramind_baseline\runs\step6c_v3_terramind_l_upernet_dice_topographic_lambda05_warmup_5sa_dataloader"
+$LogPath = Join-Path $RunDir "logs\step6c_v3_lambda05_warmup_5sa_dataloader_training.log"
+$StdoutLog = Join-Path $RunDir "logs\step6c_v3_lambda05_warmup_stdout.log"
+$StderrLog = Join-Path $RunDir "logs\step6c_v3_lambda05_warmup_stderr.log"
+$LaunchInfo = Join-Path $RunDir "metadata\step6c_v3_warmup_launch_info.json"
+
+if (!(Test-Path -LiteralPath $ConfigPath)) {
+    throw "Config not found: $ConfigPath"
+}
+if (!(Test-Path -LiteralPath $TrainScript)) {
+    throw "Training script not found: $TrainScript"
+}
+
+foreach ($subdir in @("logs", "metadata")) {
+    New-Item -ItemType Directory -Force -Path (Join-Path $RunDir $subdir) | Out-Null
+}
+
+$existingArtifacts = @(
+    (Join-Path $RunDir "checkpoints\best_checkpoint.pt"),
+    (Join-Path $RunDir "checkpoints\last_checkpoint.pt"),
+    (Join-Path $RunDir "metrics\training_state.json"),
+    (Join-Path $RunDir "metrics\training_epoch_metrics.csv"),
+    (Join-Path $RunDir "metrics\pure_dice_parity_metrics.json"),
+    (Join-Path $RunDir "metrics\step6c_v3_lambda05_warmup_5sa_dataloader_summary.json")
+) | Where-Object { Test-Path -LiteralPath $_ }
+
+if ($existingArtifacts.Count -gt 0) {
+    throw "Refusing to overwrite existing STEP 6C/v3 warmup artifacts: $($existingArtifacts -join ', ')"
+}
+
+$arguments = @(
+    "scripts\step6c_v3_train.py",
+    "--config",
+    "configs\step6c_v3_terramind_l_upernet_dice_topographic_lambda05_warmup_5sa_dataloader.yaml"
+)
+
+$child = Start-Process `
+    -FilePath $Python `
+    -ArgumentList $arguments `
+    -WorkingDirectory $RepoRoot `
+    -RedirectStandardOutput $StdoutLog `
+    -RedirectStandardError $StderrLog `
+    -WindowStyle Hidden `
+    -PassThru
+
+$info = [ordered]@{
+    step = "6C-v3-physics-warmup"
+    launched_at = (Get-Date).ToUniversalTime().ToString("o")
+    repo_root = $RepoRoot
+    config_path = $ConfigPath
+    run_dir = $RunDir
+    launcher_script = $PSCommandPath
+    log_path = $LogPath
+    stdout_log = $StdoutLog
+    stderr_log = $StderrLog
+    parent_pid = $PID
+    python_child_pid = $child.Id
+    command = "$Python scripts\step6c_v3_train.py --config configs\step6c_v3_terramind_l_upernet_dice_topographic_lambda05_warmup_5sa_dataloader.yaml"
+    monitor_command = "Get-Content -Wait -Tail 50 -LiteralPath '$LogPath'"
+    guardrails = @{
+        dem_as_model_input = $false
+        dem_in_loss_only = $true
+        keep_dem_outside_batch_image = $true
+        dataloader_side_d4 = $true
+        fp32 = $true
+        initialization = "original TerraMind pretrained checkpoint"
+        darn_started = $false
+        sturm_training_started = $false
+        raw_data_modified = $false
+    }
+}
+
+$info | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $LaunchInfo -Encoding UTF8
+
+Write-Output "config_path=$ConfigPath"
+Write-Output "run_dir=$RunDir"
+Write-Output "launcher_script=$PSCommandPath"
+Write-Output "log_path=$LogPath"
+Write-Output "parent_pid=$PID"
+Write-Output "python_child_pid=$($child.Id)"
+Write-Output "monitor_command=Get-Content -Wait -Tail 50 -LiteralPath '$LogPath'"

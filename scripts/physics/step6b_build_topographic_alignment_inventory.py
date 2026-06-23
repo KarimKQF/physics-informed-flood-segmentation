@@ -10,7 +10,7 @@ from typing import Any
 import rasterio
 
 
-REPO_ROOT = Path("C:/Users/Karim/Desktop/flood-segmentation-training/physics-informed-flood-segmentation")
+REPO_ROOT = Path("C:/flood_research/repos/physics-informed-flood-segmentation")
 RUN_DIR = Path(
     "E:/flood_research/experiments/terramind_baseline/runs/"
     "step6b_topographic_alignment_validation"

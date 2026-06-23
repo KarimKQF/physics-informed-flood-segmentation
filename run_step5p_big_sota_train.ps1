@@ -8,7 +8,7 @@ $ErrorActionPreference = "Stop"
 # ----------------------------
 # Paths
 # ----------------------------
-$REPO = "C:/Users/Karim/Desktop/flood-segmentation-training/physics-informed-flood-segmentation"
+$REPO = "C:/flood_research/repos/physics-informed-flood-segmentation"
 $VENV = "E:/flood_research/venvs/terramind-gpu"
 $EXP_ROOT = "E:/flood_research/experiments"
 $BASE_RUN = "E:/flood_research/experiments/terramind_baseline/runs/step5o_terramind_l_upernet_long_classical_training"

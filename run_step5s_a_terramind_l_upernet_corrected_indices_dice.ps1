@@ -3,7 +3,7 @@
 
 $ErrorActionPreference = "Stop"
 
-$REPO = "C:/Users/Karim/Desktop/flood-segmentation-training/physics-informed-flood-segmentation"
+$REPO = "C:/flood_research/repos/physics-informed-flood-segmentation"
 $PYTHON = "E:/flood_research/venvs/terramind-gpu/Scripts/python.exe"
 $RUNNER = "$REPO/scripts/step5s_a_corrected_indices_runner.py"
 $CONFIG = "$REPO/configs/step5s_a_terramind_l_upernet_corrected_indices_dice.yaml"

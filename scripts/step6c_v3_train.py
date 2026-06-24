@@ -212,7 +212,9 @@ class TopographySegmentationDataset(GenericMultimodalSegmentationDataset):
             output["mask"] -= 1
 
         tile_id = tile_id_from_mask_path(sample["mask"])
-        topo_path = dem_path_for_sample(self.config, split=self.split_name, tile_id=tile_id)
+        dem_map = self.config.get("dem", {}).get("dem_tile_id_map") or {}
+        dem_tile_id = dem_map.get(tile_id, tile_id)  # shuffled control: map real tile to different DEM
+        topo_path = dem_path_for_sample(self.config, split=self.split_name, tile_id=dem_tile_id)
         output["topography"] = load_dem_array(topo_path)[:, :, None]
 
         if self.transform:
@@ -432,6 +434,12 @@ def save_ckpt(path: Path, task: Any, optimizer: Any, scheduler: Any, epoch: int,
 def run(config_path: Path) -> tuple[dict[str, Any], RunPaths]:
     with config_path.open("r", encoding="utf-8-sig") as handle:
         config = yaml.safe_load(handle)
+    # If a shuffled-DEM map file is specified, load and inject the mapping.
+    dem_map_file = config.get("dem", {}).get("dem_tile_id_map_file")
+    if dem_map_file:
+        with open(dem_map_file, encoding="utf-8") as _f:
+            _map_data = json.load(_f)
+        config.setdefault("dem", {})["dem_tile_id_map"] = _map_data.get("mapping", {})
     paths = RunPaths(config)
     paths.ensure_dirs()
     configure_logging(paths.log)
@@ -496,6 +504,9 @@ def run(config_path: Path) -> tuple[dict[str, Any], RunPaths]:
         "started_at": now_utc(),
     }
     write_json(paths.metrics_json, summary)
+
+    early_stopping_patience = int(config["trainer"].get("early_stopping_patience", max_epochs))
+    early_stopping_min_epochs = int(config["trainer"].get("early_stopping_min_epochs", 0))
 
     train_start = time.time()
     for epoch in range(1, max_epochs + 1):
@@ -603,6 +614,13 @@ def run(config_path: Path) -> tuple[dict[str, Any], RunPaths]:
             max_grad_norm,
             bn_count,
         )
+
+        if no_improve >= early_stopping_patience and epoch >= early_stopping_min_epochs:
+            logging.info(
+                "early_stop epoch=%d no_improve=%d patience=%d best_epoch=%d best_miou=%.6f",
+                epoch, no_improve, early_stopping_patience, best_epoch, best_miou,
+            )
+            break
 
     last_two = epoch_rows[: min(2, len(epoch_rows))]
     parity_passed = (

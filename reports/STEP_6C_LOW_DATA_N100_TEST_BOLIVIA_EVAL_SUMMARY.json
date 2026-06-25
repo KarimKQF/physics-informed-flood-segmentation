@@ -1,0 +1,63 @@
+{
+  "step": "6C-v3-low-data-n100-seed42-eval",
+  "generated": "2026-06-23T10:16:43+00:00",
+  "checkpoint": "E:\\flood_research\\experiments\\terramind_baseline\\runs\\step6c_v3_low_data_n100_seed42_lambda05_warmup\\checkpoints\\best_checkpoint.pt",
+  "dem_as_model_input": false,
+  "lambda_topo_eval": 0.5,
+  "metrics": {
+    "valid": {
+      "miou": 0.8337709368876544,
+      "iou_background": 0.9598315838417807,
+      "iou_water": 0.707710289933528,
+      "f1_water": 0.8288411612968325,
+      "precision_water": 0.8553469317110886,
+      "recall_water": 0.803928754181368,
+      "water_pred_pixels": 2103094,
+      "pred_water_fraction": 0.10362761752130172,
+      "loss_dice": 0.1857633098613384,
+      "loss_topo": 0.00011396164348888796,
+      "topographic_inconsistency_score": 0.00011396164348888796,
+      "topo_violation_fraction": 0.0009011166985452093,
+      "topo_descending_pair_count": 38649822,
+      "topo_violation_pair_count": 34828,
+      "batches": 43,
+      "batchnorm_eval_modules": 13
+    },
+    "test": {
+      "miou": 0.848694883988789,
+      "iou_background": 0.9587418828871779,
+      "iou_water": 0.7386478850904001,
+      "f1_water": 0.8496808254559196,
+      "precision_water": 0.8649236382220238,
+      "recall_water": 0.834965965875856,
+      "water_pred_pixels": 2477221,
+      "pred_water_fraction": 0.12073776328122414,
+      "loss_dice": 0.17913983265558878,
+      "loss_topo": 0.0001256148232439753,
+      "topographic_inconsistency_score": 0.0001256148232439753,
+      "topo_violation_fraction": 0.000955447331914105,
+      "topo_descending_pair_count": 38490871,
+      "topo_violation_pair_count": 36776,
+      "batches": 45,
+      "batchnorm_eval_modules": 13
+    },
+    "bolivia": {
+      "miou": 0.8382624344749336,
+      "iou_background": 0.9444139176483441,
+      "iou_water": 0.7321109513015233,
+      "f1_water": 0.8453395560502736,
+      "precision_water": 0.8596955823986979,
+      "recall_water": 0.8314551162545288,
+      "water_pred_pixels": 439922,
+      "pred_water_fraction": 0.15339971371932987,
+      "loss_dice": 0.18586109951138496,
+      "loss_topo": 8.105374801305702e-05,
+      "topographic_inconsistency_score": 8.105374801305702e-05,
+      "topo_violation_fraction": 0.0015583101586242806,
+      "topo_descending_pair_count": 5609923,
+      "topo_violation_pair_count": 8742,
+      "batches": 8,
+      "batchnorm_eval_modules": 13
+    }
+  }
+}

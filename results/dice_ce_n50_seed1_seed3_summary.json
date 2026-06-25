@@ -1,0 +1,80 @@
+{
+  "experiment": "Dice+CE anti-collapse baseline, N=50, seeds 1 and 3",
+  "generated": "2026-06-24",
+  "model": "TerraMind-L + UPerNet",
+  "loss": "CombinedDiceCELoss (smp.DiceLoss + 1.0 * nn.CrossEntropyLoss)",
+  "lambda_topo": 0.0,
+  "dem_as_model_input": false,
+  "n_train": 50,
+  "context": "Seeds 1 and 3 collapsed under all 4 previously tested conditions (Dice-only, Physics real DEM warmup, Physics shuffled DEM, Physics real DEM no-warmup). Dice+CE added CE term to prevent all-background gradient vanishing.",
+  "seeds": {
+    "seed1": {
+      "run_tag": "n50_seed1_dice_ce",
+      "status": "completed",
+      "run_dir": "E:/flood_research/experiments/terramind_baseline/runs/n50_seed1_dice_ce",
+      "best_epoch": 46,
+      "stop_epoch": 61,
+      "stop_reason": "early_stop (patience=15, no_improve=15)",
+      "val_mIoU": 0.8396372499335817,
+      "val_water_IoU": 0.7180432254973027,
+      "val_water_F1": 0.835884935653419,
+      "val_pred_water_px": 2125797,
+      "pred_water_fraction": 0.10474628259313688,
+      "val_topo_violation_fraction": 0.0015518053356106012,
+      "val_loss_dice_at_best": 0.2022683440252792,
+      "best_checkpoint_exists": true,
+      "collapsed": false,
+      "collapse_type": "none",
+      "collapse_check": {
+        "val_water_iou_lt_001": false,
+        "val_pred_water_px_lt_5000": false,
+        "pred_water_frac_gt_090": false,
+        "val_miou_lt_010": false
+      }
+    },
+    "seed3": {
+      "run_tag": "n50_seed3_dice_ce",
+      "status": "in_progress_at_epoch_40",
+      "run_dir": "E:/flood_research/experiments/terramind_baseline/runs/n50_seed3_dice_ce",
+      "best_epoch_so_far": 31,
+      "current_epoch": 40,
+      "no_improve_so_far": 9,
+      "note": "Metrics below are at best_epoch=31. Run was still in progress when report was generated.",
+      "val_mIoU": 0.8386564903052987,
+      "val_water_IoU": 0.7169621509433524,
+      "val_water_F1": 0.835151957833702,
+      "val_pred_water_px": 2198165,
+      "pred_water_fraction": 0.10831213529624077,
+      "val_topo_violation_fraction": 0.001725777676285288,
+      "val_loss_dice_at_best": 0.20171135802601659,
+      "best_checkpoint_exists": true,
+      "collapsed": false,
+      "collapse_type": "none",
+      "collapse_check": {
+        "val_water_iou_lt_001": false,
+        "val_pred_water_px_lt_5000": false,
+        "pred_water_frac_gt_090": false,
+        "val_miou_lt_010": false
+      }
+    }
+  },
+  "dice_ce_rescue_count": "2/2 tested (seeds 1 and 3)",
+  "comparison_per_seed": {
+    "seed1": {
+      "dice_only":            {"collapsed": true,  "collapse_type": "all-background"},
+      "physics_real_dem_warmup": {"collapsed": true, "collapse_type": "all-background"},
+      "physics_shuffled_dem":    {"collapsed": true, "collapse_type": "all-background"},
+      "physics_real_dem_no_warmup": {"collapsed": true, "collapse_type": "all-background"},
+      "dice_ce":              {"collapsed": false, "val_mIoU": 0.8396, "val_water_IoU": 0.7180}
+    },
+    "seed3": {
+      "dice_only":            {"collapsed": true,  "collapse_type": "all-background"},
+      "physics_real_dem_warmup": {"collapsed": true, "collapse_type": "all-background"},
+      "physics_shuffled_dem":    {"collapsed": true, "collapse_type": "all-background"},
+      "physics_real_dem_no_warmup": {"collapsed": true, "collapse_type": "all-background"},
+      "dice_ce":              {"collapsed": false, "val_mIoU": 0.8387, "val_water_IoU": 0.7170, "note": "best-so-far at epoch 31"}
+    }
+  },
+  "manifest_audit_conclusion": "Composition does not explain collapse. Seed1 has the most water of all 5 seeds (1,680,776 px, mean_frac=0.134) yet collapsed under all conditions until Dice+CE. The collapse is caused by optimization dynamics: Dice loss gradient vanishes when model predicts all-background. CE provides non-zero pixel-wise gradient from epoch 1.",
+  "next_recommended_step": "Launch Dice+CE on all 5 seeds to establish a complete 5-seed anti-collapse baseline. Then compare Physics real DEM vs Dice+CE. Optionally test Dice+CE+topo to isolate the contribution of the topographic prior above a stable baseline."
+}

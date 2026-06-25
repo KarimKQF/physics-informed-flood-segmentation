@@ -1,0 +1,173 @@
+{
+  "report": "STEP_6C_LOW_DATA_N50_COMPARATIVE_REPORT",
+  "generated": "2026-06-23",
+  "scope": "read-only audit; no training, no data modification",
+  "experiment": {
+    "dataset": "Sen1Floods11",
+    "train_n": 50,
+    "valid_n": 86,
+    "test_n": 89,
+    "bolivia_n": 15,
+    "seed": 42,
+    "manifest": "C:/flood_research/repos/physics-informed-flood-segmentation/manifests/terramind_baseline/low_data_seed42/flood_train_low_data_n50_seed42.txt"
+  },
+  "baseline": {
+    "step": "5S-A-low-data-n50-seed42",
+    "run_dir": "E:/flood_research/experiments/terramind_baseline/runs/step5s_a_low_data_n50_seed42_dice",
+    "loss": "smp.DiceLoss (smooth=0.0)",
+    "dem_as_model_input": false,
+    "dem_in_loss": false,
+    "best_epoch": 1,
+    "final_epoch": 30,
+    "collapsed": true,
+    "collapse_description": "all-background absorbing state from epoch 2; water IoU exactly 0.0 for epochs 2-30",
+    "valid": {
+      "miou": 0.44492397467777434,
+      "iou_background": 0.8897532057063897,
+      "iou_water": 9.474364915890432e-05,
+      "f1_water": 0.0001894693473004416,
+      "precision_water": 0.9464285714285714,
+      "recall_water": 9.474415725742479e-05,
+      "pred_water_pixels": 212,
+      "pred_water_fraction": 1.044e-05,
+      "loss_dice": 0.5204906255699867
+    },
+    "test": {
+      "miou": 0.4380361631382588,
+      "iou_background": 0.8750415920820179,
+      "iou_water": 0.0010307341944997374,
+      "f1_water": 0.0020593457509157083,
+      "precision_water": 0.9884155455904334,
+      "recall_water": 0.0010307466463712848,
+      "pred_water_pixels": 2645,
+      "loss_dice": 0.5354070855511559
+    },
+    "bolivia": {
+      "miou": 0.4214264454388137,
+      "iou_background": 0.8415558597598723,
+      "iou_water": 0.001297031117755037,
+      "f1_water": 0.0025907020143805916,
+      "precision_water": 0.9656301145662848,
+      "recall_water": 0.0012970909986281614,
+      "pred_water_pixels": 590,
+      "loss_dice": 0.5512752756476402
+    }
+  },
+  "physics": {
+    "step": "6C-v3-low-data-n50-seed42-lambda05-warmup",
+    "run_dir": "E:/flood_research/experiments/terramind_baseline/runs/step6c_v3_low_data_n50_seed42_lambda05_warmup",
+    "loss": "smp.DiceLoss + lambda * TopographicInconsistencyLoss",
+    "lambda_topo": 0.5,
+    "lambda_schedule": "warmup_linear: 0 for epochs 1-5, linear 0->0.5 for epochs 6-20, fixed 0.5 from epoch 21",
+    "dem_as_model_input": false,
+    "dem_in_loss": true,
+    "dem_batch_key": "topography",
+    "best_epoch": 55,
+    "final_epoch": 80,
+    "collapsed": false,
+    "collapse_description": "no collapse; water IoU = 0.545 at epoch 1 and improved throughout",
+    "valid_at_best_epoch": {
+      "miou": 0.8242505159574861,
+      "iou_water": 0.691408618611468,
+      "f1_water": 0.8175536189227505,
+      "pred_water_pixels": 2116688,
+      "pred_water_fraction": 0.10429744675032551,
+      "topo_inconsistency_score": 0.00013374110041925548,
+      "topo_violation_fraction": 0.0008361487408661287,
+      "loss_dice": 0.19738655658655388,
+      "loss_topo": 0.00013374110041925548
+    },
+    "test": {
+      "miou": 0.8435558235034043,
+      "iou_background": 0.9561100063651696,
+      "iou_water": 0.731001640641639,
+      "f1_water": 0.8445995930664456,
+      "precision_water": 0.837312731482634,
+      "recall_water": 0.8520143984979547,
+      "pred_water_pixels": 2611157,
+      "pred_water_fraction": 0.12726569642196292,
+      "loss_dice": 0.18336591720581055,
+      "topo_inconsistency_score": 0.0003928315883454017,
+      "topo_violation_fraction": 0.0009688011476799265,
+      "topo_descending_pair_count": 38490871,
+      "topo_violation_pair_count": 37290
+    },
+    "bolivia": {
+      "miou": 0.8225754051335614,
+      "iou_background": 0.9369591472759758,
+      "iou_water": 0.7081916629911471,
+      "f1_water": 0.8291711970436159,
+      "precision_water": 0.8218736366502957,
+      "recall_water": 0.8365995110626473,
+      "pred_water_pixels": 463014,
+      "pred_water_fraction": 0.16145183702574956,
+      "loss_dice": 0.2016545571386814,
+      "topo_inconsistency_score": 0.0001354284057129007,
+      "topo_violation_fraction": 0.0021251628587415547,
+      "topo_descending_pair_count": 5609923,
+      "topo_violation_pair_count": 11922
+    },
+    "test_bolivia_eval_script": "scripts/step6c_v3_low_data_n50_eval.py",
+    "test_bolivia_eval_elapsed_seconds": 40.1
+  },
+  "deltas_valid": {
+    "delta_miou": 0.379327,
+    "delta_iou_water": 0.691314,
+    "delta_f1_water": 0.817365,
+    "delta_pred_water_pixels": 2116476,
+    "note": "physics minus baseline, validation split, at respective best checkpoints"
+  },
+  "deltas_test": {
+    "delta_miou": 0.405520,
+    "delta_iou_water": 0.729971,
+    "delta_f1_water": 0.842541,
+    "delta_pred_water_pixels": 2608512,
+    "note": "physics minus baseline, test split"
+  },
+  "deltas_bolivia": {
+    "delta_miou": 0.401149,
+    "delta_iou_water": 0.706895,
+    "delta_f1_water": 0.826580,
+    "delta_pred_water_pixels": 462424,
+    "note": "physics minus baseline, Bolivia/OOD split"
+  },
+  "fairness_checks": {
+    "same_train_manifest": true,
+    "same_valid_test_bolivia_splits": true,
+    "same_seed": true,
+    "same_architecture": true,
+    "same_pretrained_checkpoint": true,
+    "same_dice_component": true,
+    "same_optimiser": true,
+    "same_lr_scheduler": true,
+    "same_batch_size": true,
+    "same_precision": true,
+    "same_d4_augmentation": true,
+    "baseline_dem_in_model": false,
+    "physics_dem_in_model": false,
+    "physics_dem_in_loss_only": true,
+    "raw_data_modified": false,
+    "existing_runs_overwritten": false
+  },
+  "full_data_reference": {
+    "step5s_a_full_data_valid_miou": 0.881233,
+    "step5s_a_full_data_test_miou": 0.873051,
+    "step5s_a_full_data_bolivia_miou": 0.843955,
+    "step6c_v3_full_data_valid_miou": 0.878494,
+    "step6c_v3_full_data_test_miou": 0.872132,
+    "step6c_v3_full_data_bolivia_miou": 0.846406
+  },
+  "main_finding": "Dice-only training collapsed to all-background at N=50 (water IoU = 9.5e-05 valid, 0.001 test, 0.001 Bolivia). Physics-loss training avoided collapse entirely on all splits (water IoU: 0.691 valid / 0.731 test / 0.708 Bolivia). Physics N=50 achieves 93.8-97.2% of full-data physics performance. One seed; multi-seed replication required.",
+  "key_hypothesis": "H3: a topographic physics prior stabilises training in data-scarce regimes where pure task loss collapses",
+  "physics_n50_as_pct_of_fulldata": {
+    "valid_miou_pct": 93.8,
+    "test_miou_pct": 96.7,
+    "bolivia_miou_pct": 97.2
+  },
+  "one_seed_caution": true,
+  "recommended_next": [
+    "launch N=100 paired baseline vs physics",
+    "multi-seed low-data N=50 and N=100 (seeds 0 and 1)",
+    "physics on U-Net or SegFormer at N=50"
+  ]
+}

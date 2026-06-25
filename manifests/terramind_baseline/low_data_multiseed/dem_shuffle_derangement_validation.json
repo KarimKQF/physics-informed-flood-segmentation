@@ -1,0 +1,81 @@
+{
+  "description": "Validation of DEM shuffle derangement mappings for E1+E2 experiment",
+  "algorithm": "Sattolo's algorithm — single-cycle derangement, deterministic from seed",
+  "derangement_property": "No sample receives its own DEM (0 self-maps, verified per seed)",
+  "bijection_property": "Each DEM target used exactly once (permutation, not just injection)",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    42
+  ],
+  "all_valid": true,
+  "records": {
+    "0": {
+      "manifest_path": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\manifests\\terramind_baseline\\low_data_multiseed\\flood_train_low_data_n50_seed0.txt",
+      "dem_map_path": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\manifests\\terramind_baseline\\low_data_multiseed\\dem_shuffle_map_n50_seed0.json",
+      "dem_shuffle_seed": 10000,
+      "n_tiles": 50,
+      "self_maps": 0,
+      "is_bijective": true,
+      "is_single_cycle": true,
+      "valid_derangement": true,
+      "dem_files_checked": 50,
+      "dem_files_missing": 0,
+      "sha256_16": "e4848ee90d2deba1"
+    },
+    "1": {
+      "manifest_path": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\manifests\\terramind_baseline\\low_data_multiseed\\flood_train_low_data_n50_seed1.txt",
+      "dem_map_path": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\manifests\\terramind_baseline\\low_data_multiseed\\dem_shuffle_map_n50_seed1.json",
+      "dem_shuffle_seed": 10001,
+      "n_tiles": 50,
+      "self_maps": 0,
+      "is_bijective": true,
+      "is_single_cycle": true,
+      "valid_derangement": true,
+      "dem_files_checked": 50,
+      "dem_files_missing": 0,
+      "sha256_16": "c40e20d1397f06ab"
+    },
+    "2": {
+      "manifest_path": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\manifests\\terramind_baseline\\low_data_multiseed\\flood_train_low_data_n50_seed2.txt",
+      "dem_map_path": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\manifests\\terramind_baseline\\low_data_multiseed\\dem_shuffle_map_n50_seed2.json",
+      "dem_shuffle_seed": 10002,
+      "n_tiles": 50,
+      "self_maps": 0,
+      "is_bijective": true,
+      "is_single_cycle": true,
+      "valid_derangement": true,
+      "dem_files_checked": 50,
+      "dem_files_missing": 0,
+      "sha256_16": "7c046fedb8ec3485"
+    },
+    "3": {
+      "manifest_path": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\manifests\\terramind_baseline\\low_data_multiseed\\flood_train_low_data_n50_seed3.txt",
+      "dem_map_path": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\manifests\\terramind_baseline\\low_data_multiseed\\dem_shuffle_map_n50_seed3.json",
+      "dem_shuffle_seed": 10003,
+      "n_tiles": 50,
+      "self_maps": 0,
+      "is_bijective": true,
+      "is_single_cycle": true,
+      "valid_derangement": true,
+      "dem_files_checked": 50,
+      "dem_files_missing": 0,
+      "sha256_16": "1ee0b72e14e0afea"
+    },
+    "42": {
+      "manifest_path": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\manifests\\terramind_baseline\\low_data_multiseed\\flood_train_low_data_n50_seed42.txt",
+      "dem_map_path": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\manifests\\terramind_baseline\\low_data_multiseed\\dem_shuffle_map_n50_seed42.json",
+      "dem_shuffle_seed": 10042,
+      "n_tiles": 50,
+      "self_maps": 0,
+      "is_bijective": true,
+      "is_single_cycle": true,
+      "valid_derangement": true,
+      "dem_files_checked": 50,
+      "dem_files_missing": 0,
+      "sha256_16": "50153308b3ad4df9"
+    }
+  }
+}

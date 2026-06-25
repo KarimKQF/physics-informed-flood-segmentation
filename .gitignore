@@ -85,6 +85,14 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Large reports/inventory files (not needed on other machines)
+reports/sen1floods11_file_inventory.csv
+reports/sen1floods11_handlabeled_audit.csv
+reports/sen1floods11_handlabeled_index.csv
+reports/sen1floods11_step3_stats_summary.json
+reports/experiment_logs/
+reports/figures/
+
 # Secrets
 .env
 *.key
@@ -94,3 +102,8 @@ Thumbs.db
 *.crt
 *.token
 secrets.*
+
+# Vendored external repos (cloned locally, not committed; see docs/segman_setup.md)
+external/
+# SegMAN smoke-test outputs (regenerated)
+experiments_cvpr/segman/smoke_results.json

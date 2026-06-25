@@ -114,6 +114,54 @@ class CombinedDicePhysicsLoss(nn.Module):
         }
 
 
+class CombinedDiceCELoss(nn.Module):
+    """Dice + alpha * CrossEntropy (no topographic term).
+
+    Drop-in replacement for CombinedDicePhysicsLoss when lambda_topo=0 and a CE
+    term is needed to counter all-background collapse. Keeps the same forward
+    signature and dict keys so the training loop requires no changes.
+
+    Total loss:  L = DiceLoss(logits, target) + ce_alpha * CE(logits, target)
+    """
+
+    def __init__(
+        self,
+        *,
+        ce_alpha: float = 1.0,
+        ignore_index: int = -1,
+        dice_smooth: float = 0.0,
+        class_weights: "Iterable[float] | Tensor | None" = None,
+    ) -> None:
+        super().__init__()
+        self.lambda_topo = 0.0  # compatibility with training loop
+        self.ce_alpha = float(ce_alpha)
+        self.loss_dice = smp.losses.DiceLoss(
+            mode="multiclass",
+            ignore_index=ignore_index,
+            smooth=dice_smooth,
+        )
+        weight = None
+        if class_weights is not None:
+            weight = torch.as_tensor(class_weights, dtype=torch.float32)
+        self.loss_ce = nn.CrossEntropyLoss(weight=weight, ignore_index=ignore_index)
+
+    def set_lambda_topo(self, value: float) -> None:
+        """No-op: compatibility with CombinedDicePhysicsLoss interface."""
+
+    def forward(self, logits: Tensor, target: Tensor, topography: Tensor) -> "dict[str, Tensor]":
+        target = target.to(device=logits.device, dtype=torch.long)
+        loss_dice = self.loss_dice(logits, target)
+        loss_ce = self.loss_ce(logits, target)
+        loss_total = loss_dice + self.ce_alpha * loss_ce
+        zero = logits.new_tensor(0.0)
+        return {
+            "loss_total": loss_total,
+            "loss_dice": loss_dice,
+            "loss_topo": zero,
+            "lambda_topo": zero,
+        }
+
+
 class CombinedSegmentationPhysicsLoss(nn.Module):
     """Cross-entropy segmentation loss plus the STEP 6A topographic prior.
 

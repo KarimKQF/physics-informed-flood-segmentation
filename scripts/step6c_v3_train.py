@@ -40,7 +40,7 @@ for path in (str(SRC_ROOT), str(SCRIPTS_ROOT)):
     if path not in sys.path:
         sys.path.insert(0, path)
 
-from losses.combined_loss import CombinedDicePhysicsLoss  # noqa: E402
+from losses.combined_loss import CombinedDiceCELoss, CombinedDicePhysicsLoss  # noqa: E402
 from terratorch.datasets.generic_multimodal_dataset import GenericMultimodalSegmentationDataset  # noqa: E402
 
 import step6c_lambda05_train as t6c  # noqa: E402
@@ -325,8 +325,15 @@ class RunPaths:
             path.mkdir(parents=True, exist_ok=True)
 
 
-def build_loss(config: dict[str, Any]) -> CombinedDicePhysicsLoss:
+def build_loss(config: dict[str, Any]) -> "CombinedDicePhysicsLoss | CombinedDiceCELoss":
     physics = config["physics_loss"]
+    seg_loss = str(physics.get("segmentation_loss", "dice")).lower()
+    if seg_loss == "dice_ce":
+        return CombinedDiceCELoss(
+            ce_alpha=float(physics.get("ce_alpha", 1.0)),
+            ignore_index=int(physics["ignore_index"]),
+            dice_smooth=float(physics.get("dice_smooth", 0.0)),
+        )
     return CombinedDicePhysicsLoss(
         lambda_topo=float(physics["lambda_topo"]),
         ignore_index=int(physics["ignore_index"]),

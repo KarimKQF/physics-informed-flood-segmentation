@@ -102,3 +102,8 @@ reports/figures/
 *.crt
 *.token
 secrets.*
+
+# Vendored external repos (cloned locally, not committed; see docs/segman_setup.md)
+external/
+# SegMAN smoke-test outputs (regenerated)
+experiments_cvpr/segman/smoke_results.json

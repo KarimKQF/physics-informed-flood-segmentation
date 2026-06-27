@@ -1,0 +1,56 @@
+{
+  "0": {
+    "tile_id": "Ghana_1078550",
+    "violations": {
+      "ce": 0.014192127343120062,
+      "dice_ce": 0.014351079169363007,
+      "dice_ce_topo": 0.014124005131873086,
+      "dice_ce_topo_dem_shuffled": 0.018642778477922513
+    }
+  },
+  "1": {
+    "tile_id": "Ghana_141271",
+    "violations": {
+      "ce": 0.012080869923553651,
+      "dice_ce": 0.00968403878661471,
+      "dice_ce_topo": 0.008233325203730612,
+      "dice_ce_topo_dem_shuffled": 0.010428317929137855
+    }
+  },
+  "2": {
+    "tile_id": "Ghana_167233",
+    "violations": {
+      "ce": 2.2959037251037854e-05,
+      "dice_ce": 7.653012417012618e-06,
+      "dice_ce_topo": 0.0,
+      "dice_ce_topo_dem_shuffled": 0.0
+    }
+  },
+  "3": {
+    "tile_id": "Ghana_313799",
+    "violations": {
+      "ce": 0.000930880899756057,
+      "dice_ce": 0.001040677108445233,
+      "dice_ce_topo": 0.002453706576792889,
+      "dice_ce_topo_dem_shuffled": 0.0026923939869867497
+    }
+  },
+  "4": {
+    "tile_id": "Ghana_319168",
+    "violations": {
+      "ce": 0.009778326922949112,
+      "dice_ce": 0.010163614260945747,
+      "dice_ce_topo": 0.01010382829470489,
+      "dice_ce_topo_dem_shuffled": 0.0134518424041929
+    }
+  },
+  "5": {
+    "tile_id": "Ghana_359826",
+    "violations": {
+      "ce": 0.012341388092782554,
+      "dice_ce": 0.013292917091625901,
+      "dice_ce_topo": 0.01247813477525106,
+      "dice_ce_topo_dem_shuffled": 0.014227352755160683
+    }
+  }
+}

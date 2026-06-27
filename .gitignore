@@ -91,7 +91,11 @@ reports/sen1floods11_handlabeled_audit.csv
 reports/sen1floods11_handlabeled_index.csv
 reports/sen1floods11_step3_stats_summary.json
 reports/experiment_logs/
-reports/figures/
+# Ignore all of reports/figures/ except the segman_n50 summary artifacts
+reports/figures/*
+!reports/figures/segman_n50/
+reports/figures/segman_n50/panels/
+reports/figures/segman_n50/topo_violations/
 
 # Secrets
 .env

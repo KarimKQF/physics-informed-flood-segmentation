@@ -34,7 +34,7 @@ param(
     [switch]$KillOrphans
 )
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"
 
 $PY      = "E:/flood_research/venvs/terramind-gpu/Scripts/python.exe"
 $ROOT    = "C:/flood_research/repos/physics-informed-flood-segmentation"
@@ -300,19 +300,31 @@ for ($i = $start_idx; $i -lt $variants.Count; $i++) {
         exit 1
     }
 
-    # Per-run log in run directory
-    $run_log = Join-Path $v.run_dir "logs/$($v.tag)_chain_stdout.log"
-    $null = New-Item -ItemType Directory -Force -Path (Split-Path $run_log)
+    # Per-run logs in run directory
+    $run_stdout = Join-Path $v.run_dir "logs/$($v.tag)_chain_stdout.log"
+    $run_stderr = Join-Path $v.run_dir "logs/$($v.tag)_chain_stderr.log"
+    $null = New-Item -ItemType Directory -Force -Path (Split-Path $run_stdout)
 
-    $py_args = @($SCRIPT, "--config", $v.config)
-    Write-Chain "CMD: $PY $($py_args -join ' ')"
+    $py_args_str = "`"$SCRIPT`" --config `"$($v.config)`""
+    Write-Chain "CMD: $PY $py_args_str"
     $t_start = Get-Date
 
-    # Run sequentially — output goes to both master log and per-run log
-    & $PY @py_args 2>&1 | Tee-Object -FilePath $run_log -Append | ForEach-Object {
-        Add-Content -Path $LOGFILE -Value $_ -Encoding UTF8
+    # Use Start-Process for OS-level redirection — avoids PowerShell 5.1 ErrorRecord
+    # wrapping that kills the chain when Python writes to stderr (warnings, tqdm, etc.)
+    $proc = Start-Process -FilePath $PY `
+        -ArgumentList @($SCRIPT, "--config", $v.config) `
+        -Wait -PassThru -NoNewWindow `
+        -RedirectStandardOutput $run_stdout `
+        -RedirectStandardError  $run_stderr
+    $exit_code = $proc.ExitCode
+
+    # Append stdout+stderr to master log
+    foreach ($lf in @($run_stdout, $run_stderr)) {
+        if (Test-Path $lf) {
+            Get-Content $lf -Encoding UTF8 -ErrorAction SilentlyContinue |
+                ForEach-Object { Add-Content -Path $LOGFILE -Value $_ -Encoding UTF8 }
+        }
     }
-    $exit_code = $LASTEXITCODE
 
     $elapsed = [math]::Round(((Get-Date) - $t_start).TotalMinutes, 1)
     Write-Chain "$($v.tag) exited (code=$exit_code, elapsed=${elapsed}min)"

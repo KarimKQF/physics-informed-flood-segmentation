@@ -1,28 +1,30 @@
-"""Config-driven loss selector for the SegMAN flood-segmentation experiments.
+﻿"""Config-driven loss selector for the SegMAN flood-segmentation experiments.
 
-Four mutually exclusive modes, selected from config (never hardcoded):
+Six mutually exclusive modes, selected from config (never hardcoded):
 
-    ce                          -> L = CE
-    dice_ce                     -> L = Dice + alpha * CE
-    dice_ce_topo                -> L = Dice + alpha * CE + lambda_topo * Topo
-    dice_ce_topo_dem_shuffled   -> identical loss to dice_ce_topo; the DEM is
-                                   spatially shuffled across samples by the
-                                   datamodule (a reproducible derangement), so
-                                   only the *data* differs, not the loss math.
+    ce                              -> L = CE
+    dice_ce                         -> L = Dice + alpha * CE
+    dice_ce_topo                    -> L = Dice + alpha * CE + lambda * TopoV1
+    dice_ce_topo_dem_shuffled       -> identical to dice_ce_topo; DEM shuffled
+                                       by datamodule (reproducible derangement).
+    dice_ce_d8                      -> L = Dice + alpha * CE + lambda * D8Downstream
+    dice_ce_d8_dem_shuffled         -> identical to dice_ce_d8; DEM shuffled
+                                       (negative control for DEM-specificity test).
 
-Formulation (matches the project convention):
+V1 TopoLoss (local 4-/8-neighbour elevation regularizer):
+    L_topo = (1/N) * sum_{(i,j) active} w_ij * p_i * (1 - p_j)
+
+D8 Downstream (slope-weighted steepest-descent hinge loss):
+    L_D8 = sum_i(M_i * w_i * max(0, p_i - p_{d(i)} - tau)^2)
+           / (sum_i(M_i * w_i) + eps)
+
+Both physics components are logged under ``loss_topo`` for train_segman.py
+compatibility.  The config ``loss.mode`` and run_tag identify which formulation
+is active.
+
+Total loss:
     L_DiceCE = L_Dice + alpha * L_CE
-    L_total  = L_DiceCE + lambda_topo * L_topo
-
-Components are reused from the existing repository:
-    * Dice : ``segmentation_models_pytorch.losses.DiceLoss`` (exact parity with
-      the TerraMind baselines' ``loss: dice``).
-    * CE   : ``torch.nn.CrossEntropyLoss`` with ``ignore_index``.
-    * Topo : ``losses.physics_topographic_loss.TopographicInconsistencyLoss``.
-
-Every component is logged separately (loss_ce / loss_dice / loss_topo /
-loss_total). For ``ce`` no Dice or Topo is computed; for ``dice_ce`` Topo is
-disabled (loss_topo == 0).
+    L_total  = L_DiceCE + lambda_topo * L_phys
 """
 
 from __future__ import annotations
@@ -35,14 +37,24 @@ import segmentation_models_pytorch as smp
 import torch
 from torch import Tensor, nn
 
-# Reuse the repository's topographic loss from src/.
+# Repository src/ on sys.path.
 _SRC = Path(__file__).resolve().parents[3] / "src"
 if str(_SRC) not in sys.path:
     sys.path.insert(0, str(_SRC))
 from losses.physics_topographic_loss import TopographicInconsistencyLoss  # noqa: E402
+from losses.d8_downstream_loss import D8DownstreamLoss                    # noqa: E402
 
-MODES = ("ce", "dice_ce", "dice_ce_topo", "dice_ce_topo_dem_shuffled")
-_TOPO_MODES = ("dice_ce_topo", "dice_ce_topo_dem_shuffled")
+MODES = (
+    "ce",
+    "dice_ce",
+    "dice_ce_topo",
+    "dice_ce_topo_dem_shuffled",
+    "dice_ce_d8",
+    "dice_ce_d8_dem_shuffled",
+)
+_TOPO_V1_MODES  = ("dice_ce_topo", "dice_ce_topo_dem_shuffled")
+_D8_MODES       = ("dice_ce_d8",   "dice_ce_d8_dem_shuffled")
+_ANY_PHYS_MODES = _TOPO_V1_MODES + _D8_MODES
 
 
 class SegManCombinedLoss(nn.Module):
@@ -56,35 +68,53 @@ class SegManCombinedLoss(nn.Module):
         water_class: int = 1,
         dice_smooth: float = 0.0,
         class_weights: "list[float] | None" = None,
+        # V1 topo params
         elevation_margin: float = 0.0,
         elevation_scale: float = 1.0,
         use_elevation_weight: bool = True,
         neighborhood: str = "4",
+        # D8 params
+        d8_s0: float = 1.0,
+        d8_tau: float = 0.05,
+        d8_eps: float = 1e-6,
     ) -> None:
         super().__init__()
         if mode not in MODES:
             raise ValueError(f"Unknown loss mode {mode!r}; choose from {MODES}")
-        self.mode = mode
-        self.use_dice = mode != "ce"
-        self.use_topo = mode in _TOPO_MODES
-        self.ce_alpha = float(ce_alpha)
-        self.lambda_topo = float(lambda_topo)
+
+        self.mode         = mode
+        self.use_dice     = mode != "ce"
+        self.use_topo     = mode in _TOPO_V1_MODES
+        self.use_d8       = mode in _D8_MODES
+        self.ce_alpha     = float(ce_alpha)
+        self.lambda_topo  = float(lambda_topo)
         self.ignore_index = int(ignore_index)
 
         weight = torch.as_tensor(class_weights, dtype=torch.float32) if class_weights else None
         self.loss_ce = nn.CrossEntropyLoss(weight=weight, ignore_index=ignore_index)
+
         if self.use_dice:
             self.loss_dice = smp.losses.DiceLoss(
                 mode="multiclass", ignore_index=ignore_index, smooth=dice_smooth
             )
+
         if self.use_topo:
-            self.loss_topo = TopographicInconsistencyLoss(
+            self.loss_phys = TopographicInconsistencyLoss(
                 ignore_index=ignore_index,
                 water_class=water_class,
                 elevation_margin=elevation_margin,
                 elevation_scale=elevation_scale,
                 use_elevation_weight=use_elevation_weight,
                 neighborhood=neighborhood,
+                reduction="mean",
+            )
+        elif self.use_d8:
+            self.loss_phys = D8DownstreamLoss(
+                ignore_index=ignore_index,
+                water_class=water_class,
+                s0=d8_s0,
+                tau=d8_tau,
+                eps=d8_eps,
                 reduction="mean",
             )
 
@@ -97,15 +127,16 @@ class SegManCombinedLoss(nn.Module):
         self, logits: Tensor, target: Tensor, topography: Tensor | None = None
     ) -> dict[str, Tensor]:
         target = target.to(device=logits.device, dtype=torch.long)
-        zero = logits.new_tensor(0.0)
+        zero   = logits.new_tensor(0.0)
 
-        loss_ce = self.loss_ce(logits, target)
+        loss_ce   = self.loss_ce(logits, target)
         loss_dice = self.loss_dice(logits, target) if self.use_dice else zero
 
-        if self.use_topo:
+        use_phys = self.use_topo or self.use_d8
+        if use_phys:
             if topography is None:
-                raise ValueError("topography is required for topographic loss modes.")
-            loss_topo = self.loss_topo(logits=logits, target=target, topography=topography)
+                raise ValueError("topography is required for physics loss modes.")
+            loss_topo = self.loss_phys(logits=logits, target=target, topography=topography)
         else:
             loss_topo = zero
 
@@ -115,10 +146,10 @@ class SegManCombinedLoss(nn.Module):
             loss_total = loss_dice + self.ce_alpha * loss_ce + self.lambda_topo * loss_topo
 
         return {
-            "loss_total": loss_total,
-            "loss_ce": loss_ce,
-            "loss_dice": loss_dice,
-            "loss_topo": loss_topo,
+            "loss_total":  loss_total,
+            "loss_ce":     loss_ce,
+            "loss_dice":   loss_dice,
+            "loss_topo":   loss_topo,   # D8 or V1; train_segman.py uses this key
             "lambda_topo": logits.new_tensor(self.lambda_topo),
         }
 
@@ -126,6 +157,7 @@ class SegManCombinedLoss(nn.Module):
 def build_loss(config: dict[str, Any]) -> SegManCombinedLoss:
     loss_cfg = config["loss"]
     topo_cfg = loss_cfg.get("topo", {})
+    d8_cfg   = loss_cfg.get("d8",   {})
     return SegManCombinedLoss(
         mode=str(loss_cfg["mode"]),
         ce_alpha=float(loss_cfg.get("ce_alpha", 1.0)),
@@ -134,24 +166,29 @@ def build_loss(config: dict[str, Any]) -> SegManCombinedLoss:
         water_class=int(loss_cfg.get("water_class", 1)),
         dice_smooth=float(loss_cfg.get("dice_smooth", 0.0)),
         class_weights=loss_cfg.get("class_weights"),
+        # V1 topo
         elevation_margin=float(topo_cfg.get("elevation_margin", 0.0)),
         elevation_scale=float(topo_cfg.get("elevation_scale", 1.0)),
         use_elevation_weight=bool(topo_cfg.get("use_elevation_weight", True)),
         neighborhood=str(topo_cfg.get("neighborhood", "4")),
+        # D8
+        d8_s0=float(d8_cfg.get("s0", 1.0)),
+        d8_tau=float(d8_cfg.get("tau", 0.05)),
+        d8_eps=float(d8_cfg.get("eps", 1e-6)),
     )
 
 
 def lambda_for_epoch(config: dict[str, Any], epoch: int) -> float:
-    """Optional epoch-wise lambda schedule (constant or warmup_linear)."""
+    """Epoch-wise lambda schedule (constant or warmup_linear)."""
     loss_cfg = config["loss"]
-    base = float(loss_cfg.get("lambda_topo", 0.0))
+    base     = float(loss_cfg.get("lambda_topo", 0.0))
     schedule = loss_cfg.get("lambda_schedule") or {"type": "constant"}
-    kind = str(schedule.get("type", "constant")).lower()
+    kind     = str(schedule.get("type", "constant")).lower()
     if kind == "constant":
         return base
     if kind == "warmup_linear":
         warmup = int(schedule.get("warmup_epochs", 0))
-        ramp = int(schedule.get("ramp_epochs", 0))
+        ramp   = int(schedule.get("ramp_epochs",   0))
         if epoch <= warmup:
             return 0.0
         if ramp <= 0 or epoch >= warmup + ramp:

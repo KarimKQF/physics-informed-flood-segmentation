@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "run_tag": "segman_n100_dice_ce_seed0",
+    "config": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\configs\\segman\\multiseed_n100\\n100_seed0_dice_ce.yaml",
+    "checkpoint": "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_dice_ce_seed0\\checkpoints\\best_checkpoint.pt",
+    "best_epoch": 34,
+    "best_validation_miou": 0.854557434322133,
+    "s0": 1.0,
+    "tau": 0.05,
+    "thr": 0.5,
+    "eval_splits": [
+      "val",
+      "test",
+      "bolivia"
+    ],
+    "vf_routine": "diagnose_gt_topographic_consistency._compute_d8 (D8 steepest descent, edge pad)"
+  },
+  "results": {
+    "val": {
+      "pooled": {
+        "vf_gt_weighted": 0.002165915584588292,
+        "vf_gt_unweighted": 0.004005979123072366,
+        "vf_pred_weighted": 0.0006248731907922627,
+        "vf_pred_unweighted": 0.001206741962337025,
+        "H_R_weighted": -0.001541042393796029,
+        "H_R_unweighted": -0.0027992371607353413
+      },
+      "useful_violation": {
+        "binary_set": {
+          "n_active": 23168,
+          "useful_rate": 0.5856353591159968,
+          "harmful_rate": 0.41436464088396,
+          "label_endorsed_rate": 0.0894337016574547
+        },
+        "hinge_set": {
+          "n_active": 113759,
+          "useful_rate": 0.5802354099455816,
+          "harmful_rate": 0.4197645900544096,
+          "label_endorsed_rate": 0.0887578125686751
+        }
+      },
+      "paired": {
+        "n_tiles": 86,
+        "H_R_weighted_pertile_ci": [
+          -0.0030305917360666664,
+          -0.0022808198525314533,
+          -0.0015944039690823214
+        ],
+        "H_R_unweighted_pertile_ci": [
+          -0.0037336415882458468,
+          -0.002832468640927696,
+          -0.0019816680121482614
+        ],
+        "pct_tiles_pred_cleaner_weighted": 88.37209302325581,
+        "pct_tiles_pred_cleaner_unweighted": 89.53488372093024
+      }
+    },
+    "test": {
+      "pooled": {
+        "vf_gt_weighted": 0.0024083310187984295,
+        "vf_gt_unweighted": 0.004208245625588485,
+        "vf_pred_weighted": 0.0005834211230437437,
+        "vf_pred_unweighted": 0.001148136073007436,
+        "H_R_weighted": -0.0018249098957546857,
+        "H_R_unweighted": -0.0030601095525810487
+      },
+      "useful_violation": {
+        "binary_set": {
+          "n_active": 21950,
+          "useful_rate": 0.5858314350796999,
+          "harmful_rate": 0.41416856492025445,
+          "label_endorsed_rate": 0.10177676537584958
+        },
+        "hinge_set": {
+          "n_active": 121258,
+          "useful_rate": 0.590905342327924,
+          "harmful_rate": 0.4090946576720677,
+          "label_endorsed_rate": 0.09118573619884798
+        }
+      },
+      "paired": {
+        "n_tiles": 89,
+        "H_R_weighted_pertile_ci": [
+          -0.0034402898593797254,
+          -0.002327158874885131,
+          -0.001204922830128454
+        ],
+        "H_R_unweighted_pertile_ci": [
+          -0.003900287678925194,
+          -0.0026655227858007396,
+          -0.0015448930898196002
+        ],
+        "pct_tiles_pred_cleaner_weighted": 89.8876404494382,
+        "pct_tiles_pred_cleaner_unweighted": 93.25842696629213
+      }
+    },
+    "bolivia": {
+      "pooled": {
+        "vf_gt_weighted": 0.0032090209290236075,
+        "vf_gt_unweighted": 0.005040592654559483,
+        "vf_pred_weighted": 0.0009403493373693971,
+        "vf_pred_unweighted": 0.0021184263427667903,
+        "H_R_weighted": -0.0022686715916542103,
+        "H_R_unweighted": -0.0029221663117926927
+      },
+      "useful_violation": {
+        "binary_set": {
+          "n_active": 5875,
+          "useful_rate": 0.6086808510637262,
+          "harmful_rate": 0.3913191489361036,
+          "label_endorsed_rate": 0.06859574468083939
+        },
+        "hinge_set": {
+          "n_active": 32649,
+          "useful_rate": 0.6136175686850864,
+          "harmful_rate": 0.3863824313148829,
+          "label_endorsed_rate": 0.06383043891083758
+        }
+      },
+      "paired": {
+        "n_tiles": 15,
+        "H_R_weighted_pertile_ci": [
+          -0.004061274753808775,
+          -0.0024742452568083813,
+          -0.0010457630319060337
+        ],
+        "H_R_unweighted_pertile_ci": [
+          -0.004651047648257202,
+          -0.002976386918668361,
+          -0.0013644310129508877
+        ],
+        "pct_tiles_pred_cleaner_weighted": 80.0,
+        "pct_tiles_pred_cleaner_unweighted": 80.0
+      }
+    }
+  }
+}

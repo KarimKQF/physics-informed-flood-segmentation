@@ -1,0 +1,76 @@
+{
+  "run_tag": "segman_n100_dice_ce_seed0",
+  "config_path": "configs\\segman\\multiseed_n100\\n100_seed0_dice_ce.yaml",
+  "ckpt_path": "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_dice_ce_seed0\\checkpoints\\best_checkpoint.pt",
+  "fit_split": "train",
+  "out_hw": 128,
+  "ridge": 0.01,
+  "min_std_m": 1.0,
+  "feature_dims": {
+    "trained": 1008,
+    "random": 1008,
+    "input": 15
+  },
+  "conditions": [
+    "trained",
+    "random",
+    "input"
+  ],
+  "best_epoch": 34,
+  "best_validation_miou": 0.854557434322133,
+  "results": {
+    "val": {
+      "trained": {
+        "pooled": {
+          "nrmse": 0.9204916204178045,
+          "nmae": 0.7091338278156208,
+          "r2": 0.1526435047753396,
+          "pearson": 0.41420335310430073,
+          "n_pix": 1261568,
+          "n_tiles": 77
+        },
+        "per_tile": {
+          "median_nrmse": 0.9133624681680119,
+          "median_rmse_m": 8.549379886841264,
+          "median_r2": 0.16571808121476772,
+          "median_pearson": 0.434459730972848,
+          "median_signal_std_m": 8.944262504577637
+        }
+      },
+      "random": {
+        "pooled": {
+          "nrmse": 0.9137158471776963,
+          "nmae": 0.6994666740660993,
+          "r2": 0.16507243656977832,
+          "pearson": 0.42987971882591963,
+          "n_pix": 1261568,
+          "n_tiles": 77
+        },
+        "per_tile": {
+          "median_nrmse": 0.9079371772239241,
+          "median_rmse_m": 8.441472655632799,
+          "median_r2": 0.1755999122407068,
+          "median_pearson": 0.4298698906138039,
+          "median_signal_std_m": 8.944262504577637
+        }
+      },
+      "input": {
+        "pooled": {
+          "nrmse": 0.9142132957578902,
+          "nmae": 0.7119297376711067,
+          "r2": 0.16416308036021,
+          "pearson": 0.40544961826507764,
+          "n_pix": 1261568,
+          "n_tiles": 77
+        },
+        "per_tile": {
+          "median_nrmse": 0.9364553270826846,
+          "median_rmse_m": 9.068193627463437,
+          "median_r2": 0.12299804924753555,
+          "median_pearson": 0.35663801930351685,
+          "median_signal_std_m": 8.944262504577637
+        }
+      }
+    }
+  }
+}

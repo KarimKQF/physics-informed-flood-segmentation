@@ -1,0 +1,4 @@
+tile_index,n_valid,n_gt_water,n_pred_water,auc_elev_gt,auc_elev_pred_binary,auc_model_vs_gt,auc_shuffled_gt,auc_shuffled_pred,mean_h_gt_water,mean_h_gt_dry,elev_gap_gt,mean_h_pred_water,mean_h_pred_dry,elev_gap_pred
+0,233229,96811,103360,0.956906,0.958279,0.990438,0.498878,0.499026,88.696968,95.146080,6.449112,88.811371,95.380234,6.568863
+1,262144,0,0,,,,,,,199.621414,,,199.621414,
+2,55761,0,0,,,,,,,172.939468,,,172.939468,

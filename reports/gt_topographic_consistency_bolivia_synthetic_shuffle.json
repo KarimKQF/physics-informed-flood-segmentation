@@ -1,0 +1,218 @@
+{
+  "summary": {
+    "suffix": "bolivia_synthetic_shuffle",
+    "splits": [
+      "bolivia"
+    ],
+    "n_tiles_total": 15,
+    "n_tiles_shuffled": 15,
+    "shuffle_map_path": "C:\\flood_research\\repos\\physics-informed-flood-segmentation\\manifests\\terramind_baseline\\low_data_multiseed_n100\\dem_shuffle_map_n100_seed0.json",
+    "shuffle_map_entries": 100,
+    "s0": 1.0,
+    "synthetic_shuffle_used": true,
+    "per_split": {
+      "bolivia": {
+        "n_tiles": 15,
+        "n_with_shuffle": 15,
+        "real_current_loss_weighted_viol_frac": {
+          "mean": 0.003360736774905874,
+          "std": 0.0037061191409136357,
+          "n": 15
+        },
+        "shuffled_current_loss_weighted_viol_frac": {
+          "mean": 0.006654848351962926,
+          "std": 0.006660232253648567,
+          "n": 15
+        },
+        "delta_current_loss_weighted_viol_frac": {
+          "mean": -0.0032941115770570542,
+          "std": 0.0038874636213268874,
+          "n": 15
+        },
+        "pct_real_better_current_loss_weighted_viol_frac": 86.66666666666667,
+        "real_current_loss_unweighted_viol_frac": {
+          "mean": 0.004788963281158372,
+          "std": 0.00445054157455656,
+          "n": 15
+        },
+        "shuffled_current_loss_unweighted_viol_frac": {
+          "mean": 0.006796326191353942,
+          "std": 0.006246420533683365,
+          "n": 15
+        },
+        "delta_current_loss_unweighted_viol_frac": {
+          "mean": -0.002007362910195571,
+          "std": 0.002201200994149597,
+          "n": 15
+        },
+        "pct_real_better_current_loss_unweighted_viol_frac": 100.0,
+        "real_d8_weighted_viol_frac": {
+          "mean": 0.003824373034700008,
+          "std": 0.004167098824521108,
+          "n": 15
+        },
+        "shuffled_d8_weighted_viol_frac": {
+          "mean": 0.007825580551315128,
+          "std": 0.007648765633180359,
+          "n": 15
+        },
+        "delta_d8_weighted_viol_frac": {
+          "mean": -0.004001207516615121,
+          "std": 0.0046738590718544545,
+          "n": 15
+        },
+        "pct_real_better_d8_weighted_viol_frac": 93.33333333333333,
+        "real_d8_unweighted_viol_frac": {
+          "mean": 0.0052032149521154016,
+          "std": 0.004664366314821812,
+          "n": 15
+        },
+        "shuffled_d8_unweighted_viol_frac": {
+          "mean": 0.007736127811218349,
+          "std": 0.0070151262840720905,
+          "n": 15
+        },
+        "delta_d8_unweighted_viol_frac": {
+          "mean": -0.002532912859102947,
+          "std": 0.0029934731456381395,
+          "n": 15
+        },
+        "pct_real_better_d8_unweighted_viol_frac": 100.0,
+        "real_delta_mean_elev": {
+          "mean": 2.5547449747721354,
+          "std": 1.6046644501428842,
+          "n": 15
+        },
+        "shuffled_delta_mean_elev": {
+          "mean": 0.15637308756510418,
+          "std": 0.9823444604888605,
+          "n": 15
+        },
+        "delta_delta_mean_elev": {
+          "mean": 2.3983718872070314,
+          "std": 1.887716306578274,
+          "n": 15
+        },
+        "pct_real_better_delta_mean_elev": 93.33333333333333,
+        "real_elev_auc": {
+          "mean": 0.8556095646180142,
+          "std": 0.10096362242995097,
+          "n": 15
+        },
+        "shuffled_elev_auc": {
+          "mean": 0.47908680441975543,
+          "std": 0.1509443954106812,
+          "n": 15
+        },
+        "delta_elev_auc": {
+          "mean": 0.37652276019825864,
+          "std": 0.19758695594432193,
+          "n": 15
+        },
+        "pct_real_better_elev_auc": 100.0
+      }
+    }
+  },
+  "per_split": {
+    "bolivia": {
+      "n_tiles": 15,
+      "n_with_shuffle": 15,
+      "real_current_loss_weighted_viol_frac": {
+        "mean": 0.003360736774905874,
+        "std": 0.0037061191409136357,
+        "n": 15
+      },
+      "shuffled_current_loss_weighted_viol_frac": {
+        "mean": 0.006654848351962926,
+        "std": 0.006660232253648567,
+        "n": 15
+      },
+      "delta_current_loss_weighted_viol_frac": {
+        "mean": -0.0032941115770570542,
+        "std": 0.0038874636213268874,
+        "n": 15
+      },
+      "pct_real_better_current_loss_weighted_viol_frac": 86.66666666666667,
+      "real_current_loss_unweighted_viol_frac": {
+        "mean": 0.004788963281158372,
+        "std": 0.00445054157455656,
+        "n": 15
+      },
+      "shuffled_current_loss_unweighted_viol_frac": {
+        "mean": 0.006796326191353942,
+        "std": 0.006246420533683365,
+        "n": 15
+      },
+      "delta_current_loss_unweighted_viol_frac": {
+        "mean": -0.002007362910195571,
+        "std": 0.002201200994149597,
+        "n": 15
+      },
+      "pct_real_better_current_loss_unweighted_viol_frac": 100.0,
+      "real_d8_weighted_viol_frac": {
+        "mean": 0.003824373034700008,
+        "std": 0.004167098824521108,
+        "n": 15
+      },
+      "shuffled_d8_weighted_viol_frac": {
+        "mean": 0.007825580551315128,
+        "std": 0.007648765633180359,
+        "n": 15
+      },
+      "delta_d8_weighted_viol_frac": {
+        "mean": -0.004001207516615121,
+        "std": 0.0046738590718544545,
+        "n": 15
+      },
+      "pct_real_better_d8_weighted_viol_frac": 93.33333333333333,
+      "real_d8_unweighted_viol_frac": {
+        "mean": 0.0052032149521154016,
+        "std": 0.004664366314821812,
+        "n": 15
+      },
+      "shuffled_d8_unweighted_viol_frac": {
+        "mean": 0.007736127811218349,
+        "std": 0.0070151262840720905,
+        "n": 15
+      },
+      "delta_d8_unweighted_viol_frac": {
+        "mean": -0.002532912859102947,
+        "std": 0.0029934731456381395,
+        "n": 15
+      },
+      "pct_real_better_d8_unweighted_viol_frac": 100.0,
+      "real_delta_mean_elev": {
+        "mean": 2.5547449747721354,
+        "std": 1.6046644501428842,
+        "n": 15
+      },
+      "shuffled_delta_mean_elev": {
+        "mean": 0.15637308756510418,
+        "std": 0.9823444604888605,
+        "n": 15
+      },
+      "delta_delta_mean_elev": {
+        "mean": 2.3983718872070314,
+        "std": 1.887716306578274,
+        "n": 15
+      },
+      "pct_real_better_delta_mean_elev": 93.33333333333333,
+      "real_elev_auc": {
+        "mean": 0.8556095646180142,
+        "std": 0.10096362242995097,
+        "n": 15
+      },
+      "shuffled_elev_auc": {
+        "mean": 0.47908680441975543,
+        "std": 0.1509443954106812,
+        "n": 15
+      },
+      "delta_elev_auc": {
+        "mean": 0.37652276019825864,
+        "std": 0.19758695594432193,
+        "n": 15
+      },
+      "pct_real_better_elev_auc": 100.0
+    }
+  }
+}

@@ -1,0 +1,109 @@
+﻿{
+    "generated_at":  "2026-06-29 20:28:37",
+    "runs":  [
+                 {
+                     "best_epoch":  30,
+                     "integrity_ok":  true,
+                     "run_dir":  "E:/flood_research/experiments/segman/runs/segman_n100_d8_lambda100p0_seed0",
+                     "logs":  [
+                                  {
+                                      "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_lambda100p0_seed0\\logs\\segman_n100_d8_lambda100p0_seed0_chain_stderr.log",
+                                      "size_bytes":  2812,
+                                      "last_write":  "2026-06-29 16:58:56"
+                                  },
+                                  {
+                                      "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_lambda100p0_seed0\\logs\\segman_n100_d8_lambda100p0_seed0_chain_stdout.log",
+                                      "size_bytes":  10161,
+                                      "last_write":  "2026-06-29 17:00:16"
+                                  },
+                                  {
+                                      "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_lambda100p0_seed0\\logs\\segman_n100_d8_lambda100p0_seed0_training.log",
+                                      "size_bytes":  10161,
+                                      "last_write":  "2026-06-29 17:00:16"
+                                  }
+                              ],
+                     "last_epoch":  45,
+                     "best_miou":  0.8398398568331589,
+                     "files":  [
+                                   {
+                                       "ok":  true,
+                                       "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_lambda100p0_seed0\\checkpoints\\best_checkpoint.pt",
+                                       "size_bytes":  402233209,
+                                       "last_write":  "2026-06-29 16:20:51"
+                                   },
+                                   {
+                                       "ok":  true,
+                                       "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_lambda100p0_seed0\\checkpoints\\last_checkpoint.pt",
+                                       "size_bytes":  402233209,
+                                       "last_write":  "2026-06-29 16:58:56"
+                                   },
+                                   {
+                                       "ok":  true,
+                                       "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_lambda100p0_seed0\\metrics\\segman_n100_d8_lambda100p0_seed0_summary.json",
+                                       "size_bytes":  3210,
+                                       "last_write":  "2026-06-29 17:00:16"
+                                   },
+                                   {
+                                       "ok":  true,
+                                       "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_lambda100p0_seed0\\metrics\\training_epoch_metrics.csv",
+                                       "size_bytes":  17475,
+                                       "last_write":  "2026-06-29 16:58:56"
+                                   }
+                               ],
+                     "tag":  "segman_n100_d8_lambda100p0_seed0",
+                     "status":  "done"
+                 },
+                 {
+                     "best_epoch":  58,
+                     "integrity_ok":  true,
+                     "run_dir":  "E:/flood_research/experiments/segman/runs/segman_n100_d8_dem_shuffled_lambda100p0_seed0",
+                     "logs":  [
+                                  {
+                                      "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_dem_shuffled_lambda100p0_seed0\\logs\\segman_n100_d8_dem_shuffled_lambda100p0_seed0_chain_stderr.log",
+                                      "size_bytes":  2812,
+                                      "last_write":  "2026-06-29 20:04:57"
+                                  },
+                                  {
+                                      "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_dem_shuffled_lambda100p0_seed0\\logs\\segman_n100_d8_dem_shuffled_lambda100p0_seed0_chain_stdout.log",
+                                      "size_bytes":  16066,
+                                      "last_write":  "2026-06-29 20:06:18"
+                                  },
+                                  {
+                                      "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_dem_shuffled_lambda100p0_seed0\\logs\\segman_n100_d8_dem_shuffled_lambda100p0_seed0_training.log",
+                                      "size_bytes":  16066,
+                                      "last_write":  "2026-06-29 20:06:18"
+                                  }
+                              ],
+                     "last_epoch":  73,
+                     "best_miou":  0.8432847153544902,
+                     "files":  [
+                                   {
+                                       "ok":  true,
+                                       "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_dem_shuffled_lambda100p0_seed0\\checkpoints\\best_checkpoint.pt",
+                                       "size_bytes":  402238009,
+                                       "last_write":  "2026-06-29 19:26:43"
+                                   },
+                                   {
+                                       "ok":  true,
+                                       "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_dem_shuffled_lambda100p0_seed0\\checkpoints\\last_checkpoint.pt",
+                                       "size_bytes":  402238009,
+                                       "last_write":  "2026-06-29 20:04:57"
+                                   },
+                                   {
+                                       "ok":  true,
+                                       "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_dem_shuffled_lambda100p0_seed0\\metrics\\segman_n100_d8_dem_shuffled_lambda100p0_seed0_summary.json",
+                                       "size_bytes":  3250,
+                                       "last_write":  "2026-06-29 20:06:18"
+                                   },
+                                   {
+                                       "ok":  true,
+                                       "path":  "E:\\flood_research\\experiments\\segman\\runs\\segman_n100_d8_dem_shuffled_lambda100p0_seed0\\metrics\\training_epoch_metrics.csv",
+                                       "size_bytes":  28195,
+                                       "last_write":  "2026-06-29 20:04:57"
+                                   }
+                               ],
+                     "tag":  "segman_n100_d8_dem_shuffled_lambda100p0_seed0",
+                     "status":  "done"
+                 }
+             ]
+}
